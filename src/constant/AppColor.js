@@ -14,3 +14,5 @@ const AppColor = {
   light_Grey:'#C4C4C4',
   dark_Grey:'#949191'
 };
+
+export default AppColor;
