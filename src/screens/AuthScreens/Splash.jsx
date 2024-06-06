@@ -17,8 +17,9 @@ import translations from '../../constant/String';
 import Modal from 'react-native-modal';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {changeLanguage} from '../../redux/action/Action';
+import { useNavigation } from '@react-navigation/native';
 const Splash = () => {
-  //   const navigation = useNavigation();
+    const navigation = useNavigation();
   const language = useSelector(state => state.language);
   const string = translations[language];
   const mode = useSelector(state => state.mode);
@@ -29,7 +30,7 @@ const Splash = () => {
     const fetchLanguageFromAsyncStorage = async () => {
       try {
         const storedLanguage = await AsyncStorage.getItem('language');
-        console.log(storedLanguage, 'Line 33');
+        // console.log(storedLanguage, 'Line 33');
         if (storedLanguage) {
           dispatch(changeLanguage(storedLanguage));
           setModalVisible(false);
@@ -46,8 +47,7 @@ const Splash = () => {
   }, []);
 
   const handleSwipeSuccess = () => {
-    // navigation.navigate('NextScreen'); // Replace 'NextScreen' with the actual name of your next screen
-    console.log('hii done');
+    navigation.navigate('Login'); 
   };
 
   const changeLanguageToEnglish = async () => {
