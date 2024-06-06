@@ -18,9 +18,13 @@ import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CustomButton from '../../../componets/CustomButton';
 import LottieView from 'lottie-react-native';
+import { useSelector } from 'react-redux';
+import translations from '../../../constant/String';
 const Login = () => {
   const navigation = useNavigation();
   const [userId, setUserId] = useState('');
+  const language = useSelector(state => state.language);
+  const string = translations[language];
 
   return (
     <View style={styles.main}>
@@ -33,10 +37,10 @@ const Login = () => {
             resizeMode="cover"
             style={styles.imageStyle}
           />
-          <Text style={styles.text}>Welcome Farmer</Text>
-          <Text style={styles.text}>Login</Text>
+          <Text style={styles.text}>{string.welcomeFarmer}</Text>
+          <Text style={styles.text}>{string.login}</Text>
           <View style={styles.inputHolder}>
-            <Text style={styles.label}>Enter User Id</Text>
+            <Text style={styles.label}>{string.userId}</Text>
             <View style={styles.inputBox}>
               <Feather
                 name="user"
@@ -45,7 +49,7 @@ const Login = () => {
               />
               <TextInput
                 style={styles.textInputBox}
-                placeholder="User Id"
+                placeholder={string.userId}
                 value={userId}
                 placeholderTextColor={AppColor.primary}
                 onChangeText={text => setUserId(text)}
@@ -63,7 +67,7 @@ const Login = () => {
           </View>
 
           {/* Button */}
-          <TouchableOpacity
+          <TouchableOpacity onPress={()=> navigation.navigate('OTP')}
             style={[
               styles.inputHolder,
               {
@@ -72,10 +76,10 @@ const Login = () => {
                 overflow: 'hidden',
               },
             ]}>
-            <CustomButton title={'Login With OTP'} />
+            <CustomButton title={string.loginButton} />
           </TouchableOpacity>
           {/* Create Account */}
-          <TouchableOpacity
+          <TouchableOpacity onPress={()=> navigation.navigate('New Account')}
             style={[
               styles.inputHolder,
               {
@@ -87,7 +91,7 @@ const Login = () => {
             ]}>
             {/* <CustomButton title={'Create New Account'} /> */}
             <View style={styles.createAccount}>
-              <Text style={styles.createAccountText}>Create New Account</Text>
+              <Text style={styles.createAccountText}>{string.newAccount}</Text>
             </View>
           </TouchableOpacity>
         </View>
