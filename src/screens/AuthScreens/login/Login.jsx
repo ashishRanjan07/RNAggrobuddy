@@ -71,6 +71,7 @@ const Login = () => {
             <CustomButton
               title={string.loginButton}
               handleAction={() => navigation.navigate('OTP')}
+              color={AppColor.white}
             />
           </View>
           {/* Create Account */}
