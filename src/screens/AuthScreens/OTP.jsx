@@ -79,7 +79,7 @@ const OTP = () => {
       setShowErrorText('Enter exact 4 digit code!');
       return;
     }
-    navigation.navigate('Login');
+    navigation.navigate('BottomTab');
   };
   const renderInputs = () => {
     return otpArray.map((item, index) => (
