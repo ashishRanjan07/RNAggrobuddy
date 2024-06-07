@@ -18,7 +18,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CustomButton from '../../../componets/CustomButton';
 import LottieView from 'lottie-react-native';
-import { useSelector } from 'react-redux';
+import {useSelector} from 'react-redux';
 import translations from '../../../constant/String';
 const Login = () => {
   const navigation = useNavigation();
@@ -67,19 +67,15 @@ const Login = () => {
           </View>
 
           {/* Button */}
-          <TouchableOpacity onPress={()=> navigation.navigate('OTP')}
-            style={[
-              styles.inputHolder,
-              {
-                marginVertical: responsive(10),
-                padding: responsive(0),
-                overflow: 'hidden',
-              },
-            ]}>
-            <CustomButton title={string.loginButton} />
-          </TouchableOpacity>
+          <View style={{width: '90%', alignSelf: 'center'}}>
+            <CustomButton
+              title={string.loginButton}
+              handleAction={() => navigation.navigate('OTP')}
+            />
+          </View>
           {/* Create Account */}
-          <TouchableOpacity onPress={()=> navigation.navigate('New Account')}
+          <TouchableOpacity
+            onPress={() => navigation.navigate('New Account')}
             style={[
               styles.inputHolder,
               {
@@ -89,7 +85,6 @@ const Login = () => {
                 backgroundColor: AppColor.light_Green,
               },
             ]}>
-            {/* <CustomButton title={'Create New Account'} /> */}
             <View style={styles.createAccount}>
               <Text style={styles.createAccountText}>{string.newAccount}</Text>
             </View>
@@ -116,9 +111,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: AppColor.primary,
   },
-  scroll:{
-flex:1,
-zIndex:1,
+  scroll: {
+    flex: 1,
+    zIndex: 1,
   },
   safeAreaView: {
     backgroundColor: AppColor.primary,
@@ -179,7 +174,7 @@ zIndex:1,
     position: 'absolute',
     bottom: 0,
     alignSelf: 'center',
-    zIndex:0,
+    zIndex: 0,
   },
   icon: {
     width: responsive(200),
