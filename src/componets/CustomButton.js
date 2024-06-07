@@ -1,27 +1,31 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
-import AppColor from '../constant/AppColor';
-import {responsive} from '../constant/Responsive';
-
-const CustomButton = ({title}) => {
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
+import React from 'react'
+import AppColor from '../constant/AppColor'
+import { responsive } from '../constant/Responsive'
+const CustomButton = ({title,handleAction}) => {
   return (
-    <View style={styles.main}>
+    <TouchableOpacity onPress={() => handleAction()} style={styles.main} >
       <Text style={styles.text}>{title}</Text>
-    </View>
-  );
-};
+    </TouchableOpacity>
+  )
+}
 
-export default CustomButton;
+export default CustomButton
 
 const styles = StyleSheet.create({
-  main: {
-    // backgroundColor: AppColor.white,
-    padding: responsive(10),
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: responsive(20),
-    color: AppColor.primary,
-    fontFamily: 'OpenSans-Medium',
-  },
-});
+    main:{
+        borderWidth:2,
+        borderColor:AppColor.white,
+        marginVertical:responsive(10),
+        backgroundColor:AppColor.white,
+        alignItems:'center',
+        padding:responsive(15),
+        borderRadius:responsive(10)
+        // alignSelf:'center'
+    },
+    text:{
+        color:AppColor.black,
+        fontSize:responsive(18),
+        fontFamily:'OpenSans-600'
+    }
+})
