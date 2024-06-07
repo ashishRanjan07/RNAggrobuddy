@@ -30,7 +30,11 @@ const en = {
   Upload_Profile_Picture:'Upload Profile Picture',
   Open_Gallery:'Open Gallery',
   Open_Camera:'Open Camera',
-  Cancel:'Cancel'
+  Cancel:'Cancel',
+  Home:'Home',
+  My_Post:'My Post',
+  Learn:'Learn',
+  Profile:'Profile'
 };
 
 const hi = {
@@ -65,7 +69,11 @@ const hi = {
   Upload_Profile_Picture:'प्रोफ़ाइल चित्र अपलोड करें',
   Open_Gallery:'गैलरी खोलें',
   Open_Camera:'कैमरा खोलो',
-  Cancel:'रद्द करना'
+  Cancel:'रद्द करना',
+  Home:'घर',
+  My_Post:'मेरा उत्पाद',
+  Learn:'सीखना',
+  Profile:'प्रोफ़ाइल'
 };
 
 export default {en, hi};
