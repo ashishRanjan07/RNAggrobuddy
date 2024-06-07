@@ -2,9 +2,10 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import AppColor from '../constant/AppColor'
 import { responsive } from '../constant/Responsive'
-const CustomButton = ({title,handleAction}) => {
+
+const CustomButton = ({title,handleAction,color}) => {
   return (
-    <TouchableOpacity onPress={() => handleAction()} style={styles.main} >
+    <TouchableOpacity onPress={() => handleAction()} style={[styles.main,{backgroundColor:color, borderColor:color}]} >
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   )
@@ -15,9 +16,7 @@ export default CustomButton
 const styles = StyleSheet.create({
     main:{
         borderWidth:2,
-        borderColor:AppColor.white,
         marginVertical:responsive(10),
-        backgroundColor:AppColor.white,
         alignItems:'center',
         padding:responsive(15),
         borderRadius:responsive(10)

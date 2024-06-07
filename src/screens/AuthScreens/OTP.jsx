@@ -155,6 +155,7 @@ const OTP = () => {
               <CustomButton
                 title={string.submit}
                 handleAction={handleOtpSubmit}
+                color={AppColor.white}
               />
             </View>
           </View>
@@ -177,7 +178,7 @@ const styles = StyleSheet.create({
   lowerViewForm: {
     width: '90%',
     alignSelf: 'center',
-    gap: 5,
+    gap: responsive(5),
   },
   icon: {
     marginTop: responsive(150),
@@ -207,7 +208,7 @@ const styles = StyleSheet.create({
   },
   otpContainer: {
     flexDirection: 'row',
-    gap: 25,
+    gap: responsive(25),
     marginTop: responsive(10),
     alignItems: 'center',
   },

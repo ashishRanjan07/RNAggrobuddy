@@ -14,6 +14,23 @@ const en = {
   signIn: 'Sign in',
   sec: 'Sec',
   submit: 'Submit',
+  name:'Name',
+  Select_Gender:'Select Gender',
+  Mobile_No:'Mobile No',
+  Email_Id:'Email Id',
+  Address:'Address',
+  Pin_Code:'Pin-Code',
+  State:'State',
+  City:'City',
+  Landmark:'Landmark',
+  Create_Account:'Create Account',
+  Male:'Male',
+  Female:'Female',
+  Other:'Other',
+  Upload_Profile_Picture:'Upload Profile Picture',
+  Open_Gallery:'Open Gallery',
+  Open_Camera:'Open Camera',
+  Cancel:'Cancel'
 };
 
 const hi = {
@@ -32,6 +49,23 @@ const hi = {
   signIn: 'साइन इन करें',
   sec: 'सेकंड ',
   submit: 'जमा करें',
+  name:'नाम',
+  Select_Gender:'लिंग चुनें',
+  Mobile_No:'मोबाइल नंबर',
+  Email_Id:'ईमेल आईडी',
+  Address:'पता',
+  Pin_Code:'पिन कोड',
+  State:'राज्य',
+  City:'शहर',
+  Landmark:'सीमाचिह्न',
+  Create_Account:'खाता बनाएं',
+  Male:'पुरुष',
+  Female:'महिला',
+  Other:'अन्य',
+  Upload_Profile_Picture:'प्रोफ़ाइल चित्र अपलोड करें',
+  Open_Gallery:'गैलरी खोलें',
+  Open_Camera:'कैमरा खोलो',
+  Cancel:'रद्द करना'
 };
 
 export default {en, hi};
