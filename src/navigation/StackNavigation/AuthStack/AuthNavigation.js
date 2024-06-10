@@ -6,6 +6,7 @@ import Login from '../../../screens/AuthScreens/login/Login';
 import OTP from '../../../screens/AuthScreens/OTP';
 import NewRegistration from '../../../screens/AuthScreens/NewRegistration';
 import BottomNavigation from '../../bottomNavigaton/BottomNavigation';
+import ProductCategory from '../../../componets/learn/ProductCategory';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ const AuthNavigation = () => {
         <Stack.Screen name ='OTP' component={OTP} options={{headerShown:false}}/>
         <Stack.Screen name ='New Account' component={NewRegistration} options={{headerShown:false}}/>
         <Stack.Screen name ='BottomTab' component={BottomNavigation} options={{headerShown:false}}/>
+        <Stack.Screen name ='Product Category' component={ProductCategory} options={{headerShown:false}}/>
     </Stack.Navigator>
   )
 }
