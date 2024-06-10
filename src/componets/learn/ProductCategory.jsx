@@ -9,16 +9,15 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import Data from '../../../assets/json/Category.json';
-import AppColor from '../../../constant/AppColor';
-import {responsive} from '../../../constant/Responsive';
-import { useNavigation } from '@react-navigation/native';
-const Learn = () => {
-    const navigation = useNavigation();
-//   console.log(Data, 'Line 5');
+import CustomHeader from '../CustomHeader';
+import AppColor from '../../constant/AppColor';
+import {responsive} from '../../constant/Responsive';
+
+const ProductCategory = ({route}) => {
+  const {item} = route.params;
   const renderItem = ({item}) => {
     return (
-      <TouchableOpacity style={styles.renderHolder} key={item.id} onPress={()=> navigation.navigate('Product Category',{item})}>
+      <TouchableOpacity style={styles.renderHolder} key={item.id}>
         <Image
           source={{uri: item.image}}
           resizeMode="cover"
@@ -32,10 +31,11 @@ const Learn = () => {
     <View style={styles.main}>
       <SafeAreaView style={{backgroundColor: AppColor.primary}} />
       <StatusBar backgroundColor={AppColor.primary} barStyle={'dark-content'} />
+      <CustomHeader title={item.name} />
       <View style={styles.flatListHolder}>
         <FlatList
-        showsVerticalScrollIndicator={false}
-          data={Data.Farming_Products_Category}
+          showsVerticalScrollIndicator={false}
+          data={item.products}
           renderItem={renderItem}
           keyExtractor={item => item.id}
           numColumns={2}
@@ -45,7 +45,7 @@ const Learn = () => {
   );
 };
 
-export default Learn;
+export default ProductCategory;
 
 const styles = StyleSheet.create({
   main: {
@@ -53,10 +53,10 @@ const styles = StyleSheet.create({
     backgroundColor: AppColor.primary,
   },
   flatListHolder: {
+    marginVertical: responsive(10),
     flex: 1,
     width: '95%',
     alignSelf: 'center',
-    marginVertical: responsive(10),
   },
   renderHolder: {
     borderWidth: 2,
@@ -80,6 +80,6 @@ const styles = StyleSheet.create({
     fontSize: responsive(18),
     color: AppColor.dark_Green,
     fontFamily: 'OpenSans-Bold',
-    textAlign:'center'
+    textAlign:'center',
   },
 });

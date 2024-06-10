@@ -1,0 +1,971 @@
+{
+  "Farming_Products_Category": [
+    {
+      "id": 1,
+      "name": "Pulses",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyc9fj5Pv8NF-dHuSUaFG2CZwi7sKAT8gNsg&s",
+      "products": [
+        {
+          "id": 1,
+          "name": "Chickpeas / Garbanzo Beans",
+          "image": "https://pisumfoods.com/img/product/pulses/chickpeas.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Peas",
+          "image": "https://pisumfoods.com/img/product/pulses/peas.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Kidney Beans",
+          "image": "https://pisumfoods.com/img/product/pulses/kidney-beans.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Soya Bean",
+          "image": "https://pisumfoods.com/img/product/pulses/soyabean.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Pigeon Pea/Arhar/Tur",
+          "image": "https://pisumfoods.com/img/product/pulses/tur.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Black-Eyed Beans / Cowpea",
+          "image": "https://pisumfoods.com/img/product/pulses/black-eyed-beans.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Horse Gram",
+          "image": "https://pisumfoods.com/img/product/pulses/horse-gram.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Puffed Rice",
+          "image": "https://pisumfoods.com/img/product/pulses/puffed-rice.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Masoor Dal / Red Lentil",
+          "image": "https://pisumfoods.com/img/product/pulses/red-lentil.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Green Gram / Mung Bean",
+          "image": "https://pisumfoods.com/img/product/pulses/chickpeas.jpg"
+        },
+        {
+          "id": 11,
+          "name": "Chickpeas / Garbanzo Beans",
+          "image": "https://pisumfoods.com/img/product/pulses/green-gram-moog.jpg"
+        },
+        {
+          "id": 12,
+          "name": "Black Gram",
+          "image": "https://pisumfoods.com/img/product/pulses/black-gram.jpg"
+        },
+        {
+          "id": 13,
+          "name": "Chana Dal",
+          "image": "https://pisumfoods.com/img/product/pulses/chana-dal.jpg"
+        },
+        {
+          "id": 14,
+          "name": "Beaten Rice",
+          "image": "https://pisumfoods.com/img/product/pulses/beaten-rice.jpg"
+        },
+        {
+          "id": 15,
+          "name": "Field Beans",
+          "image": "https://pisumfoods.com/img/product/pulses/field-bean.jpg"
+        },
+        {
+          "id": 16,
+          "name": "Urad Dal Split",
+          "image": "https://pisumfoods.com/img/product/pulses/white-urad-dal.jpg"
+        },
+        {
+          "id": 17,
+          "name": "Turkish Gram / Moth Bean",
+          "image": "https://pisumfoods.com/img/product/pulses/moth-bean.jpg"
+        },
+        {
+          "id": 18,
+          "name": "Whole Masoor",
+          "image": "https://pisumfoods.com/img/product/pulses/whole-masoo.jpg"
+        },
+        {
+          "id": 19,
+          "name": "Urad Dal Gota",
+          "image": "https://pisumfoods.com/img/product/pulses/urad-gota.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Grains & Cereals",
+      "image": "https://st4.depositphotos.com/16122460/20839/i/450/depositphotos_208399272-stock-photo-bags-different-cereal-grains-top.jpg",
+      "products": [
+        {
+          "id": 1,
+          "name": "Rye",
+          "image": "https://pisumfoods.com/img/product/grains-and-cereal/Rye.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Corn / Maize",
+          "image": "https://pisumfoods.com/img/product/grains-and-cereal/Corn.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Oats",
+          "image": "https://pisumfoods.com/img/product/grains-and-cereal/Oats.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Millet / Bajra",
+          "image": "https://pisumfoods.com/img/product/grains-and-cereal/Bajara.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Rice",
+          "image": "https://pisumfoods.com/img/product/grains-and-cereal/Rice.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Wheat",
+          "image": "https://pisumfoods.com/img/product/grains-and-cereal/Wheat.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Barley",
+          "image": "https://pisumfoods.com/img/product/grains-and-cereal/Barley.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Triticale",
+          "image": "https://pisumfoods.com/img/product/grains-and-cereal/Triticale.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Fonio",
+          "image": "https://pisumfoods.com/img/product/grains-and-cereal/Fonio.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Sorghum / Jawari",
+          "image": "https://pisumfoods.com/img/product/grains-and-cereal/Sorghum.jpg"
+        },
+        {
+          "id": 11,
+          "name": "Teff",
+          "image": "https://pisumfoods.com/img/product/grains-and-cereal/Teff.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Spices",
+      "image": "https://t4.ftcdn.net/jpg/01/02/58/91/360_F_102589163_hk02O92vzEYP0rZbVyvDTbkje1GaUDk1.jpg",
+      "products": [
+        {
+          "id": 1,
+          "name": "Turmeric",
+          "image": "https://pisumfoods.com/img/product/spices/turmeric.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Ginger",
+          "image": "https://pisumfoods.com/img/product/spices/Ginger.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Star Anise",
+          "image": "https://pisumfoods.com/img/product/spices/star-anise.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Cinnamon",
+          "image": "https://pisumfoods.com/img/product/spices/cannmon.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Asafoetida",
+          "image": "https://pisumfoods.com/img/product/spices/Asafoetida.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Nutmeg",
+          "image": "https://pisumfoods.com/img/product/spices/Nutmeg.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Cumin",
+          "image": "https://pisumfoods.com/img/product/spices/Cumin.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Black Pepper",
+          "image": "https://pisumfoods.com/img/product/spices/Black-Pepper.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Garlic",
+          "image": "https://pisumfoods.com/img/product/spices/fresh-garlic.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Clove",
+          "image": "https://pisumfoods.com/img/product/spices/cloves.jpg"
+        },
+        {
+          "id": 11,
+          "name": "Mustard Seeds",
+          "image": "https://pisumfoods.com/img/product/spices/Mustard-Seeds.jpg"
+        },
+        {
+          "id": 12,
+          "name": "Bay-Leaf",
+          "image": "https://pisumfoods.com/img/product/spices/bay-leaves-dry.jpg"
+        },
+        {
+          "id": 13,
+          "name": "Chili-Pepper",
+          "image": "https://pisumfoods.com/img/product/spices/Chili-pepper.jpg"
+        },
+        {
+          "id": 14,
+          "name": "Coriander",
+          "image": "https://pisumfoods.com/img/product/spices/coriander-seeds.jpg"
+        },
+        {
+          "id": 15,
+          "name": "Saffron",
+          "image": "https://pisumfoods.com/img/product/spices/saffron.jpg"
+        },
+        {
+          "id": 16,
+          "name": "Carom Seeds / Thyme",
+          "image": "https://pisumfoods.com/img/product/spices/Carom-Seeds.jpg"
+        },
+        {
+          "id": 17,
+          "name": "Mace",
+          "image": "https://pisumfoods.com/img/product/spices/Mace.jpg"
+        },
+        {
+          "id": 18,
+          "name": "Poppy Seed",
+          "image": "https://pisumfoods.com/img/product/spices/poppy-seeds-spice.jpg"
+        },
+        {
+          "id": 19,
+          "name": "Green Cardamom",
+          "image": "https://pisumfoods.com/img/product/spices/cardamom-pod.jpgg"
+        },
+        {
+          "id": 20,
+          "name": "Peppercorns",
+          "image": "https://pisumfoods.com/img/product/spices/peppercorns.jpg"
+        },
+        {
+          "id": 21,
+          "name": "Brown Cardamom",
+          "image": "https://pisumfoods.com/img/product/spices/brown-cardamom.jpg"
+        },
+        {
+          "id": 22,
+          "name": "Green Chili Pepper",
+          "image": "https://pisumfoods.com/img/product/spices/green-chilli-pepper.png"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Fruits",
+      "image": "https://www.fruit-exotique.com/Files/Image/plusieurs-fruits-exotiques.jpg",
+      "products": [
+        {
+          "id": 1,
+          "name": "Apple",
+          "image": "https://pisumfoods.com/img/product/fruits/apple.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Banana",
+          "image": "https://pisumfoods.com/img/product/fruits/bananas.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Mango",
+          "image": "https://pisumfoods.com/img/product/fruits/mango.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Orange",
+          "image": "https://pisumfoods.com/img/product/fruits/orange.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Pineapple",
+          "image": "https://pisumfoods.com/img/product/fruits/pineapple.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Pomegranate",
+          "image": "https://pisumfoods.com/img/product/fruits/pomegranate.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Dragon Fruit",
+          "image": "https://pisumfoods.com/img/product/fruits/dragon-fruit.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Strawberry",
+          "image": "https://pisumfoods.com/img/product/fruits/strawberry.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Grapes",
+          "image": "https://pisumfoods.com/img/product/fruits/grapes.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Guava",
+          "image": "https://pisumfoods.com/img/product/fruits/guava.jpg"
+        },
+        {
+          "id": 11,
+          "name": "Litchi",
+          "image": "https://pisumfoods.com/img/product/fruits/litchi.jpg"
+        },
+        {
+          "id": 12,
+          "name": "Papaya",
+          "image": "https://pisumfoods.com/img/product/fruits/papaya.jpg"
+        },
+        {
+          "id": 13,
+          "name": "Sapota",
+          "image": "https://pisumfoods.com/img/product/fruits/chikoo.jpg"
+        },
+        {
+          "id": 14,
+          "name": "Jackfruit",
+          "image": "https://pisumfoods.com/img/product/fruits/jack-fruit.jpg"
+        },
+        {
+          "id": 15,
+          "name": "Watermelon",
+          "image": "https://pisumfoods.com/img/product/fruits/watermelon.jpg"
+        },
+        {
+          "id": 16,
+          "name": "Pears",
+          "image": "https://pisumfoods.com/img/product/fruits/pears.jpg"
+        },
+        {
+          "id": 17,
+          "name": "Coconut",
+          "image": "https://pisumfoods.com/img/product/fruits/coconut.jpg"
+        },
+        {
+          "id": 18,
+          "name": "Ber",
+          "image": "https://pisumfoods.com/img/product/fruits/ber-fruit.jpg"
+        },
+        {
+          "id": 19,
+          "name": "Amla",
+          "image": "https://pisumfoods.com/img/product/fruits/amla.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Vegetable",
+      "image": "https://img.freepik.com/free-photo/healthy-vegetables-wooden-table_1150-38014.jpg",
+      "products": [
+        {
+          "id": 1,
+          "name": "Onion",
+          "image": "https://pisumfoods.com/img/product/vegetables/Onion.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Mushroom",
+          "image": "https://pisumfoods.com/img/product/vegetables/Mushroom.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Broccolie",
+          "image": "https://pisumfoods.com/img/product/vegetables/broccoli.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Potato",
+          "image": "https://pisumfoods.com/img/product/vegetables/potato.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Spinach / Palak",
+          "image": "https://pisumfoods.com/img/product/vegetables/spinach.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Cabbage",
+          "image": "https://pisumfoods.com/img/product/vegetables/cabbage.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Brinjal",
+          "image": "https://pisumfoods.com/img/product/vegetables/brinjal.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Cauliflower",
+          "image": "https://pisumfoods.com/img/product/vegetables/Cauliflower.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Drum Stick",
+          "image": "https://pisumfoods.com/img/product/vegetables/drumstick.jpg"
+        },
+        {
+          "id": 11,
+          "name": "Lady Finger",
+          "image": "https://pisumfoods.com/img/product/vegetables/lady-finger.jpg"
+        },
+        {
+          "id": 12,
+          "name": "Green Chilli",
+          "image": "https://pisumfoods.com/img/product/vegetables/green_chilli.jpg"
+        },
+        {
+          "id": 13,
+          "name": "Doodhi / Bottle Gourd / Lauki",
+          "image": "https://pisumfoods.com/img/product/vegetables/Bottle-gourd.jpg"
+        },
+        {
+          "id": 14,
+          "name": "Bitter Gourd",
+          "image": "https://pisumfoods.com/img/product/vegetables/BitterGourd.jpg"
+        },
+        {
+          "id": 15,
+          "name": "Cucumber",
+          "image": "https://pisumfoods.com/img/product/vegetables/cucumber.jpg"
+        },
+        {
+          "id": 16,
+          "name": "Bell Pepper",
+          "image": "https://pisumfoods.com/img/product/vegetables/Bell-Pepper.jpg"
+        },
+        {
+          "id": 17,
+          "name": "Ridge Gourd / Ghosal",
+          "image": "https://pisumfoods.com/img/product/vegetables/ridge-gourd.jpg"
+        },
+        {
+          "id": 18,
+          "name": "Pumpkin",
+          "image": "https://pisumfoods.com/img/product/vegetables/pumpkin.jpg"
+        },
+        {
+          "id": 19,
+          "name": "Lemon",
+          "image": "https://pisumfoods.com/img/product/vegetables/lemon.jpg"
+        },
+        {
+          "id": 20,
+          "name": "Sweet Potato",
+          "image": "https://pisumfoods.com/img/product/vegetables/sweet-potato.jpg"
+        },
+        {
+          "id": 21,
+          "name": "Jerusalem",
+          "image": "https://pisumfoods.com/img/product/vegetables/jerusalem.jpg"
+        },
+        {
+          "id": 22,
+          "name": "Radish",
+          "image": "https://pisumfoods.com/img/product/vegetables/radish.jpg"
+        },
+        {
+          "id": 23,
+          "name": "Beetroot",
+          "image": "https://pisumfoods.com/img/product/vegetables/beetroot.jpg"
+        },
+        {
+          "id": 24,
+          "name": "Carrots",
+          "image": "https://pisumfoods.com/img/product/vegetables/Carrot.jpg"
+        },
+        {
+          "id": 25,
+          "name": "Taro",
+          "image": "https://pisumfoods.com/img/product/vegetables/taro.jpg"
+        },
+        {
+          "id": 26,
+          "name": "Curry Leaves",
+          "image": "https://pisumfoods.com/img/product/vegetables/curry-leaves.jpg"
+        },
+        {
+          "id": 27,
+          "name": "Coriander",
+          "image": "https://pisumfoods.com/img/product/vegetables/coriander.jpg"
+        },
+        {
+          "id": 28,
+          "name": "Spring Onion",
+          "image": "https://pisumfoods.com/img/product/vegetables/spring-onion.jpg"
+        },
+        {
+          "id": 29,
+          "name": "Mint",
+          "image": "https://pisumfoods.com/img/product/vegetables/mint.jpg"
+        },
+        {
+          "id": 30,
+          "name": "Papdi / Hyacinth Bean",
+          "image": "https://pisumfoods.com/img/product/vegetables/papdi.jpg"
+        },
+        {
+          "id": 31,
+          "name": "Methi / FenuGreek",
+          "image": "https://pisumfoods.com/img/product/vegetables/methi.jpg"
+        },
+        {
+          "id": 32,
+          "name": "Common Purslane / Parippu Keerai",
+          "image": "https://pisumfoods.com/img/product/vegetables/Purslane.jpg"
+        },
+        {
+          "id": 33,
+          "name": "Elephane Yam / Suran",
+          "image": "https://pisumfoods.com/img/product/vegetables/yam.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Oil Seeds",
+      "image": "https://www.seedoilpress.com/wp-content/uploads/2018/02/common-oilseeds.jpg",
+      "products": [
+        {
+          "id": 1,
+          "name": "Sunflowers",
+          "image": "https://pisumfoods.com/img/product/oilseeds/sunflower.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Soybeans",
+          "image": "https://pisumfoods.com/img/product/oilseeds/soyabean.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Sesame",
+          "image": "https://pisumfoods.com/img/product/oilseeds/sesame.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Flax",
+          "image": "https://pisumfoods.com/img/product/oilseeds/flaxseed.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Safflower",
+          "image": "https://pisumfoods.com/img/product/oilseeds/safflower-seeds.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Groundnut",
+          "image": "https://pisumfoods.com/img/product/oilseeds/Groundnut.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Meadowfoam",
+          "image": "https://pisumfoods.com/img/product/oilseeds/Meadowfoam.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Vernonia",
+          "image": "https://pisumfoods.com/img/product/oilseeds/Vernonia.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Spring Canola",
+          "image": "https://pisumfoods.com/img/product/oilseeds/Canolaseeds.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "FloriCulture",
+      "image": "https://cdn.britannica.com/52/156552-050-4D50044E/florist-kinds-plants-flowers.jpg",
+      "products": [
+        {
+          "id": 1,
+          "name": "Rose",
+          "image": "https://pisumfoods.com/img/product/floriculture/rose.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Gerbera",
+          "image": "https://pisumfoods.com/img/product/floriculture/Gerbera.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Tulip",
+          "image": "https://pisumfoods.com/img/product/floriculture/Tulip.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Carnation",
+          "image": "https://pisumfoods.com/img/product/floriculture/Carnation.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Chrysanthemum",
+          "image": "https://pisumfoods.com/img/product/floriculture/chrysanthemum.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Orchid",
+          "image": "https://pisumfoods.com/img/product/floriculture/orchid2.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Tuberose",
+          "image": "https://pisumfoods.com/img/product/floriculture/tuberose.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Gladiolus",
+          "image": "https://pisumfoods.com/img/product/floriculture/gladiolus.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Anthurium",
+          "image": "https://pisumfoods.com/img/product/floriculture/anthurium.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Hydrangea",
+          "image": "https://pisumfoods.com/img/product/floriculture/hydrangea.jpg"
+        },
+        {
+          "id": 11,
+          "name": "Jasmine",
+          "image": "https://pisumfoods.com/img/product/floriculture/jasmine.jpg"
+        },
+        {
+          "id": 12,
+          "name": "Marigold",
+          "image": "https://pisumfoods.com/img/product/floriculture/marigold.jpg"
+        },
+        {
+          "id": 13,
+          "name": "Aster",
+          "image": "https://pisumfoods.com/img/product/floriculture/aster.jpg"
+        },
+        {
+          "id": 14,
+          "name": "Lilium",
+          "image": "https://pisumfoods.com/img/product/floriculture/lilium.jpg"
+        },
+        {
+          "id": 15,
+          "name": "Crossandra",
+          "image": "https://pisumfoods.com/img/product/floriculture/crossandra.jpg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Herbs",
+      "image": "https://www.heinens.com/content/uploads/2021/03/The-Benefits-of-Fresh-Herbs_Header_800x550.jpg",
+      "products": [
+        {
+          "id": 1,
+          "name": "Neem",
+          "image": "https://pisumfoods.com/img/product/herbs/neem.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Ashwagandha",
+          "image": "https://pisumfoods.com/img/product/herbs/ashwagandha.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Aloe Vera",
+          "image": "https://pisumfoods.com/img/product/herbs/aloe-vera.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Sage",
+          "image": "https://pisumfoods.com/img/product/herbs/sage.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Fenugreek",
+          "image": "https://pisumfoods.com/img/product/herbs/fenugreek.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Giloy",
+          "image": "https://pisumfoods.com/img/product/herbs/giloy.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Curry Leaves",
+          "image": "https://pisumfoods.com/img/product/herbs/curry-leaves.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Tulasi",
+          "image": "https://pisumfoods.com/img/product/herbs/tulasi.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Carom",
+          "image": "https://pisumfoods.com/img/product/herbs/carom.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Spearmint",
+          "image": "https://pisumfoods.com/img/product/herbs/spearmint.jpg"
+        },
+        {
+          "id": 11,
+          "name": "Khus",
+          "image": "https://pisumfoods.com/img/product/herbs/khus-vetiver.jpg"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Dry Fruits",
+      "image": "https://m.media-amazon.com/images/I/61f+BoiUTGL._AC_UF1000,1000_QL80_.jpg",
+      "products": [
+        {
+          "id": 1,
+          "name": "Cashew",
+          "image": "https://pisumfoods.com/img/product/dry-fruits/cashew.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Walnut",
+          "image": "https://pisumfoods.com/img/product/dry-fruits/walnut.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Almonds",
+          "image": "https://pisumfoods.com/img/product/dry-fruits/almonds.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Apricot",
+          "image": "https://pisumfoods.com/img/product/dry-fruits/apricot.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Betel-Nut",
+          "image": "https://pisumfoods.com/img/product/dry-fruits/betel-nut.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Dates",
+          "image": "https://pisumfoods.com/img/product/dry-fruits/dates.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Dry-Fig",
+          "image": "https://pisumfoods.com/img/product/dry-fruits/dry-fig.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Hazelnut",
+          "image": "https://pisumfoods.com/img/product/dry-fruits/hazelnut.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Pistachio",
+          "image": "https://pisumfoods.com/img/product/dry-fruits/pista.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Raisens",
+          "image": "https://pisumfoods.com/img/product/dry-fruits/raisens.jpg"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Beverages",
+      "image": "https://c.ndtvimg.com/2023-10/j9q17m2g_drinks_625x300_22_October_23.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=675",
+      "products": [
+        {
+          "id": 1,
+          "name": "Tea",
+          "image": "https://pisumfoods.com/img/product/beverages/tea.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Coffee",
+          "image": "https://pisumfoods.com/img/product/beverages/coffee-beans.jpg"
+        }
+    ]
+    },
+    {
+      "id": 11,
+      "name": "Dehydrated Products",
+      "image": "https://media.licdn.com/dms/image/C5612AQGyZ36gtudV1Q/article-cover_image-shrink_720_1280/0/1635391549805?e=2147483647&v=beta&t=uS5kzf2kyjdBeyeMdqf_CpbMmxPBn3Th98vEh0gJcjM",
+      "products": [
+        {
+          "id": 1,
+          "name": "Dehydrated Apple Flakes",
+          "image": "https://pisumfoods.com/img/product/dehydrated-fruits/dehydrated-apple-flakes.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Dehydrated Apple Slices",
+          "image": "https://pisumfoods.com/img/product/dehydrated-fruits/dehydrated-apple-sliced.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Dehydrated Chikoo",
+          "image": "https://pisumfoods.com/img/product/dehydrated-fruits/dried-chikoo.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Dehydrated Kiwi",
+          "image": "https://pisumfoods.com/img/product/dehydrated-fruits/dehydrated-kiwi.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Dehydrated Mango",
+          "image": "https://pisumfoods.com/img/product/dehydrated-fruits/dehydrated-mango.png"
+        },
+        {
+          "id": 7,
+          "name": "Dehydrated Orange",
+          "image": "https://pisumfoods.com/img/product/dehydrated-fruits/dehydrated-orange.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Dehydrated Papaya",
+          "image": "https://pisumfoods.com/img/product/dehydrated-fruits/dehydrated-papaya.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Dehydrated Pineapple",
+          "image": "https://pisumfoods.com/img/product/dehydrated-fruits/dehydrated-pineapple.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Dehydrated Strawberry",
+          "image": "https://pisumfoods.com/img/product/dehydrated-fruits/dehydrated-strawberry.jpg"
+        },
+        {
+          "id": 11,
+          "name": "Dehydrated Onion Flakes",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-onion-flakes.jpg"
+        },
+        {
+          "id": 12,
+          "name": "Dehydrated Onion Chopped",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-onion-chopped.jpg"
+        },
+        {
+          "id": 13,
+          "name": "Dehydrated Onion Granules",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-onion-granules.jpg"
+        },
+        {
+          "id": 14,
+          "name": "Dehydrated Onion Minced",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-onion-minced.jpg"
+        },
+        {
+          "id": 15,
+          "name": "Dehydrated Onion Powder",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-onion-powder.jpg"
+        },
+        {
+          "id": 16,
+          "name": "Dehydrated Garlic Flakes",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-garlic-flakes.jpg"
+        },
+        {
+          "id": 17,
+          "name": "Dehydrated Garlic Chopped",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-garlic-chopped.jpg"
+        },
+        {
+          "id": 18,
+          "name": "Dehydrated Garlic Granules",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-garlic-granules.jpg"
+        },
+        {
+          "id": 19,
+          "name": "Dehydrated Garlic Minced",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-garlic-minced.jpg"
+        },
+        {
+          "id": 20,
+          "name": "Dehydrated Garlic Powder",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-garlic-powder.jpg"
+        },
+        {
+          "id": 21,
+          "name": "Dehydrated Carrot",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-carrot.jpg"
+        },
+        {
+          "id": 22,
+          "name": "Dehydrated Cabbage",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-cabbage.jpg"
+        },
+        {
+          "id": 23,
+          "name": "Dehydrated Beetroot",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-beetroot.jpg"
+        },
+        {
+          "id": 24,
+          "name": "Dehydrated Basil Leaves",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-basil-leaves.jpg"
+        },
+        {
+          "id": 25,
+          "name": "Dehydrated Potato Flakes",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-potato-flakes.jpg"
+        },
+        {
+          "id": 26,
+          "name": "Dehydrated Potato Powder",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-potato-powder.png"
+        },
+        {
+          "id": 27,
+          "name": "Dehydrated Bitter Gourd",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-bitter-gourd.png"
+        },
+        {
+          "id": 28,
+          "name": "Dehydrated Spinach Powder",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-spinach.png"
+        },
+        {
+          "id": 29,
+          "name": "Dehydrated Mushroom",
+          "image": "https://pisumfoods.com/img/product/dehydrated-products/dehydrated-mushroom.jpg"
+        }
+      ]
+    }
+  ]
+}
