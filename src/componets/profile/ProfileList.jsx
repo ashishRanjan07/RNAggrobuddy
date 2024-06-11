@@ -326,7 +326,7 @@ const styles = StyleSheet.create({
   iconHolder: {
     width: '90%',
     borderWidth: 1,
-    borderRadius: responsive(20),
+    borderRadius: responsive(10),
     padding: responsive(10),
     marginVertical: responsive(10),
     flexDirection: 'row',
