@@ -6,8 +6,6 @@ import AddNewPostForm from './AddNewPostForm';
 
 const AddNewPost = ({route}) => {
     const {title,edit,data} = route.params;
-    // console.log(edit,"Line 9")
-    console.log(data,"Line 10")
   return (
     <View style={styles.main}>
       <SafeAreaView style={{backgroundColor: AppColor.primary}} />
