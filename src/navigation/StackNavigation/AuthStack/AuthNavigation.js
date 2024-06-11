@@ -7,6 +7,7 @@ import OTP from '../../../screens/AuthScreens/OTP';
 import NewRegistration from '../../../screens/AuthScreens/NewRegistration';
 import BottomNavigation from '../../bottomNavigaton/BottomNavigation';
 import ProductCategory from '../../../componets/learn/ProductCategory';
+import AddNewPost from '../../../componets/myPost/AddNewPost';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ const AuthNavigation = () => {
         <Stack.Screen name ='New Account' component={NewRegistration} options={{headerShown:false}}/>
         <Stack.Screen name ='BottomTab' component={BottomNavigation} options={{headerShown:false}}/>
         <Stack.Screen name ='Product Category' component={ProductCategory} options={{headerShown:false}}/>
+        <Stack.Screen name='Add Product' component={AddNewPost} options={{headerShown:false}}/>
     </Stack.Navigator>
   )
 }

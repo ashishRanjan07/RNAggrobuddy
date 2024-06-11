@@ -1,0 +1,108 @@
+{
+  "farmer": {
+    "name": "John Doe",
+    "address": {
+      "street": "123 Farm Lane",
+      "city": "Ruralville",
+      "state": "California",
+      "zip": "90210",
+      "country": "USA"
+    },
+    "contactDetails": {
+      "phone": "+1-555-123-4567",
+      "email": "johndoe@example.com"
+    },
+    "details": {
+      "age": 45,
+      "experience": "20 years",
+      "farmSize": "150 acres"
+    }
+  },
+  "products": [
+    {
+      "name": "Organic Apples",
+      "images": [
+        "https://freshindiaorganics.com/cdn/shop/products/Apples.jpg?v=1686739530",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQD6y5VvJlYR85ehGK6p3qgiysVjTjZO9WYLQdHoO8MCXP038TkfifiCRN1mc1KOWBNYg&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKhnmv6qfLxJ3yySiRKgRqDMlHej7D9aC_D5r8fp2r1ATcIuwRYb38XpSpLU7jI-6UJw&usqp=CAU"
+      ],
+      "quantity": "500 kg",
+      "description": "Fresh and organically grown apples from the lush orchards of Ruralville. No pesticides or chemicals used.",
+      "price": "3.50 per kg",
+      "additionalDetails": {
+        "harvestDate": "2024-06-01",
+        "expirationDate": "2024-07-01",
+        "certifications": ["USDA Organic", "Non-GMO"],
+        "deliveryOptions": ["Local Pickup", "Nationwide Shipping"]
+      }
+    },
+    {
+      "name": "Onion",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSmPxn1Sazsl-rjErDXjL2ynjQbGp40K1XbA&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-CCoAA-kJ_Ek7rJElCd5A5ACv0p17BG_-gjU9N9shVPjDwZfTOen-8RFZek4uoKgMfRU&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgfY-PdPYkM8G6DDcsN2Nreu9jtk-4g5v_hZNnq-awkjLbp-Eb3iMjLpl8EodnmvQ1ECo&usqp=CAU"
+      ],
+      "quantity": "300 Ton",
+      "description": "Selling onions online involves listing and selling onions for free, offering multiple payment options like PayPal and credit cards, and giving discounts via coupon codes. It's a promising business due to the growing trend of buying fresh fruits and vegetables online. You can create single or multiplan checkout pages to display products and collect payments. This method is ideal for onion cultivators, sellers, and retail shop owners wanting to expand their business online",
+      "price": "30.00 per kg",
+      "additionalDetails": {
+        "harvestDate": "2024-06-05",
+        "expirationDate": "2024-06-20",
+        "certifications": ["Certified Humane", "Non-GMO"],
+        "deliveryOptions": ["Local Pickup", "Nationwide Shipping"]
+      }
+    },
+    {
+      "name": "Potato",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1BPTx1JMtuUs1JxjjhtvnO2FW6InTUoumUg&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT__cBYGnpNVEiBumb3uhSUJEdNF2wIj_zl5bdQW663ueTIUgPNVL_lbPKITYTQ7BNruPM&usqp=CAU",
+        "https://www.foodandwine.com/thmb/2IbsYtcGUKhC54n-wsggTBZ4mOU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/How-to-store-potatoes-FT-BLOg0424-01-d008928fbc3d4eafa5b336995877d142.jpg"
+      ],
+      "quantity": "2000 kg",
+      "description": "To sell potatoes online effectively, focus on creating unique potato-based products, catering to specialty niches, remembering your regular clients' preferences, and using innovative marketing campaigns to engage your audience.",
+      "price": "25.00 per kg",
+      "additionalDetails": {
+        "harvestDate": "2024-05-25",
+        "expirationDate": "2024-06-15",
+        "certifications": ["USDA Organic"],
+        "deliveryOptions": ["Local Pickup", "Nationwide Shipping"]
+      }
+    },
+    {
+      "name": "Rice",
+      "images": [
+        "https://5.imimg.com/data5/UO/RR/RB/SELLER-46431402/dhaan.jpeg",
+        "https://4.imimg.com/data4/IH/TF/MY-27862082/rice-arka-500x500.jpg",
+        "https://4.imimg.com/data4/CX/EU/MY-3826898/barley-500x500.jpg"
+      ],
+      "quantity": "150 bag",
+      "description": "Paddy, also known as rice paddy, is a level, flooded field used for rice cultivation, especially in Asia. It relies on minimal land but feeds many due to high yields. Paddies are flooded by rivers or irrigation during the growing season, featuring an impermeable subsoil and earthen bunds to retain water. Traditional farming methods are common, emphasizing hand cultivation or animal-drawn plows.",
+      "price": "20.00 per kg",
+      "additionalDetails": {
+        "harvestDate": "2024-04-15",
+        "expirationDate": "2026-04-15",
+        "certifications": ["Non-GMO"],
+        "deliveryOptions": ["Local Pickup", "Nationwide Shipping"]
+      }
+    },
+    {
+      "name": "Wheat",
+      "images": [
+        "https://th.bing.com/th/id/OIP.zfkVnZ7kRfddKFfTex5I5wHaFl?rs=1&pid=ImgDetMain",
+        "https://img.freepik.com/premium-photo/wheat-field-with-ripe-spikelets-sun-rural-landscape-with-sunny-wheat-field_199743-11867.jpg",
+        "https://th.bing.com/th/id/OIP.NuRpnnYXxYqYcpAq9vhVKQHaE8?w=630&h=420&rs=1&pid=ImgDetMain"
+      ],
+      "quantity": "1000 kg",
+      "description": "Wheat is a globally significant crop, central to agriculture and diet across various cultures. Its cultivation has evolved significantly over millennia, from early domestication in West Asia to widespread adoption in the British Empire and beyond. Technological advancements, including improved farming techniques, crop rotation, and the use of fertilizers, have enhanced wheat productivity. Despite challenges such as post-harvest losses and the impact of climate change, wheat remains a cornerstone of global food security, supported by continuous innovation in farming practices and crop science.",
+      "price": "15.00 per kg",
+      "additionalDetails": {
+        "harvestDate": "2024-06-03",
+        "expirationDate": "2024-06-10",
+        "certifications": ["USDA Organic"],
+        "deliveryOptions": ["Local Pickup", "Nationwide Shipping"]
+      }
+    }
+  ]
+}
