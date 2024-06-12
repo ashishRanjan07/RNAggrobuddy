@@ -240,7 +240,9 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={() => navigation.push('Save and Add Address')}>
             <View style={styles.iconHolder}>
               <Entypo
                 name="address"

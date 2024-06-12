@@ -9,6 +9,8 @@ import BottomNavigation from '../../bottomNavigaton/BottomNavigation';
 import ProductCategory from '../../../componets/learn/ProductCategory';
 import AddNewPost from '../../../componets/myPost/AddNewPost';
 import PrivacyPolicy from '../../../componets/profile/PrivacyPolicy';
+import Address from '../../../componets/profile/Address';
+import EditAddressForm from '../../../componets/profile/EditAddressForm';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +25,8 @@ const AuthNavigation = () => {
         <Stack.Screen name ='Product Category' component={ProductCategory} options={{headerShown:false}}/>
         <Stack.Screen name='Add Product' component={AddNewPost} options={{headerShown:false}}/>
         <Stack.Screen name='Privacy Policy' component={PrivacyPolicy} options={{headerShown:true}}/>
+        <Stack.Screen name='Save and Add Address' component={Address} options={{headerShown:true}}/>
+        <Stack.Screen name="Edit Address" component={EditAddressForm} options={{headerShown:true}}/>
 
     </Stack.Navigator>
   )
