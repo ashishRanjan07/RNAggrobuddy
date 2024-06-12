@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     fontSize: responsive(18),
     fontFamily: 'OpenSans-Medium',
     width: '65%',
+    // textAlign:'center'
   },
   iconHolder: {
     flexDirection: 'row',
