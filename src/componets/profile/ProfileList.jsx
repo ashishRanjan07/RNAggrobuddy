@@ -18,24 +18,33 @@ import Octicons from 'react-native-vector-icons/Octicons';
 import CustomAlert from '../CustomAlert';
 import {useNavigation} from '@react-navigation/native';
 import AccountDeletionModal from '../AccountDeletionModal';
+import TermsAndConditionModal from '../TermsAndConditionModal';
 const ProfileList = () => {
   const navigation = useNavigation();
   const [alertVisible, setAlertVisible] = useState(false);
   const [deletionModalVisible, setDeletionModalVisible] = useState(false);
+  const [TermAndConditionVisible, setTermAndConditionVisible] = useState(false);
 
   const showDeletionModal = () => {
     setDeletionModalVisible(true);
   };
 
+  const showTermsAndConditionModal = () => {
+    setTermAndConditionVisible(true);
+  };
+
+  const hideTermAndConditionModal = () => {
+    setTermAndConditionVisible(false);
+  };
   const hideDeletionModal = () => {
     setDeletionModalVisible(false);
   };
 
-
+  const handleAcceptTermAndCondition = () => {
+    hideTermAndConditionModal();
+  };
   const handleAccountDeletionConfirm = () => {
-    // Implement the logic for account deletion confirmation
     hideDeletionModal();
-    // Perform additional actions such as making API call for account deletion
   };
   const showAlert = () => {
     setAlertVisible(true);
@@ -246,7 +255,9 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={showTermsAndConditionModal}>
             <View style={styles.iconHolder}>
               <Octicons
                 name="code-of-conduct"
@@ -261,7 +272,9 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={() => navigation.navigate('Privacy Policy')}>
             <View style={styles.iconHolder}>
               <MaterialIcons
                 name="privacy-tip"
@@ -276,7 +289,9 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder} onPress={showDeletionModal}>
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={showDeletionModal}>
             <View style={styles.iconHolder}>
               <MaterialIcons
                 name="folder-delete"
@@ -315,10 +330,15 @@ const ProfileList = () => {
         onClose={hideAlert}
         onConfirm={handleLogout}
       />
-       <AccountDeletionModal
+      <AccountDeletionModal
         visible={deletionModalVisible}
         onClose={hideDeletionModal}
         onConfirm={handleAccountDeletionConfirm}
+      />
+      <TermsAndConditionModal
+        visible={TermAndConditionVisible}
+        onClose={hideTermAndConditionModal}
+        onConfirm={handleAcceptTermAndCondition}
       />
     </View>
   );
