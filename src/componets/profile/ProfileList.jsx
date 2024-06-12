@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {responsive} from '../../constant/Responsive';
 import AppColor from '../../constant/AppColor';
 import Feather from 'react-native-vector-icons/Feather';
@@ -15,7 +15,38 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Octicons from 'react-native-vector-icons/Octicons';
+import CustomAlert from '../CustomAlert';
+import {useNavigation} from '@react-navigation/native';
+import AccountDeletionModal from '../AccountDeletionModal';
 const ProfileList = () => {
+  const navigation = useNavigation();
+  const [alertVisible, setAlertVisible] = useState(false);
+  const [deletionModalVisible, setDeletionModalVisible] = useState(false);
+
+  const showDeletionModal = () => {
+    setDeletionModalVisible(true);
+  };
+
+  const hideDeletionModal = () => {
+    setDeletionModalVisible(false);
+  };
+
+
+  const handleAccountDeletionConfirm = () => {
+    // Implement the logic for account deletion confirmation
+    hideDeletionModal();
+    // Perform additional actions such as making API call for account deletion
+  };
+  const showAlert = () => {
+    setAlertVisible(true);
+  };
+
+  const hideAlert = () => {
+    setAlertVisible(false);
+  };
+  const handleLogout = () => {
+    navigation.push('Splash');
+  };
   return (
     <View style={styles.main}>
       <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
@@ -245,7 +276,7 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity style={styles.listHolder} onPress={showDeletionModal}>
             <View style={styles.iconHolder}>
               <MaterialIcons
                 name="folder-delete"
@@ -260,7 +291,7 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity style={styles.listHolder} onPress={showAlert}>
             <View style={styles.iconHolder}>
               <MaterialIcons
                 name="logout"
@@ -277,6 +308,18 @@ const ProfileList = () => {
           </TouchableOpacity>
         </View>
       </ScrollView>
+      <CustomAlert
+        visible={alertVisible}
+        title="Confirm ?"
+        message="are you sure you want to logout ?"
+        onClose={hideAlert}
+        onConfirm={handleLogout}
+      />
+       <AccountDeletionModal
+        visible={deletionModalVisible}
+        onClose={hideDeletionModal}
+        onConfirm={handleAccountDeletionConfirm}
+      />
     </View>
   );
 };
