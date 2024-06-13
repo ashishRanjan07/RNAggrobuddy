@@ -1,4 +1,5 @@
 import {
+  Linking,
   ScrollView,
   StyleSheet,
   Text,
@@ -79,6 +80,21 @@ const ProfileList = () => {
   const hideLanguageAlert = () => {
     setLanguageModalVisible(false);
   };
+
+
+
+  const openWhatsApp = () => {
+    const Ph = `+91${6206416452}`;
+    let message = encodeURIComponent(
+      `Hi there!\n I'm interested in your products.\n Specifically, I'm interested in the product name .\n How can I learn more or make an inquiry?`,
+    );
+
+    const url = `whatsapp://send?phone=${Ph}&text=${message}`;
+    Linking.openURL(url).catch(err =>
+      console.error('Error opening WhatsApp:', err),
+    );
+  };
+
   return (
     <View style={styles.main}>
       <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
@@ -174,7 +190,7 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity style={styles.listHolder} onPress={openWhatsApp}>
             <View style={styles.iconHolder}>
               <Ionicons
                 name="logo-whatsapp"
