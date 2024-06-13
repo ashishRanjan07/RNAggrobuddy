@@ -19,12 +19,20 @@ import CustomAlert from '../CustomAlert';
 import {useNavigation} from '@react-navigation/native';
 import AccountDeletionModal from '../AccountDeletionModal';
 import TermsAndConditionModal from '../TermsAndConditionModal';
+import LanguageModal from '../LanguageModal';
+import { useDispatch, useSelector } from 'react-redux';
+import translations from '../../constant/String';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { changeLanguage } from '../../redux/action/Action';
 const ProfileList = () => {
   const navigation = useNavigation();
   const [alertVisible, setAlertVisible] = useState(false);
   const [deletionModalVisible, setDeletionModalVisible] = useState(false);
   const [TermAndConditionVisible, setTermAndConditionVisible] = useState(false);
-
+  const [languageModalVisible, setLanguageModalVisible] = useState(false);
+  const dispatch = useDispatch();
+  const language = useSelector(state => state.language);
+  const string = translations[language];
   const showDeletionModal = () => {
     setDeletionModalVisible(true);
   };
@@ -55,6 +63,21 @@ const ProfileList = () => {
   };
   const handleLogout = () => {
     navigation.push('Splash');
+  };
+  const changeLanguageToEnglish =async () => {
+    // console.log('English');
+    dispatch(changeLanguage('en'));
+    setLanguageModalVisible(false);
+    await AsyncStorage.setItem('language', 'en');
+  };
+  const changeLanguageToHindi = async() => {
+    // console.log('Hindi');
+    dispatch(changeLanguage('hi'));
+    setLanguageModalVisible(false);
+    await AsyncStorage.setItem('language', 'hi');
+  };
+  const hideLanguageAlert = () => {
+    setLanguageModalVisible(false);
   };
   return (
     <View style={styles.main}>
@@ -136,7 +159,7 @@ const ProfileList = () => {
           <View style={styles.headerHolder}>
             <Text style={styles.headerText}>Earn and Support</Text>
           </View>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity style={styles.listHolder} onPress={()=> navigation.navigate('Refer And Earn')}>
             <View style={styles.iconHolder}>
               <Ionicons
                 name="share-outline"
@@ -210,7 +233,9 @@ const ProfileList = () => {
           <View style={styles.headerHolder}>
             <Text style={styles.headerText}>Accounts</Text>
           </View>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={() => setLanguageModalVisible(true)}>
             <View style={styles.iconHolder}>
               <Ionicons
                 name="language"
@@ -341,6 +366,15 @@ const ProfileList = () => {
         visible={TermAndConditionVisible}
         onClose={hideTermAndConditionModal}
         onConfirm={handleAcceptTermAndCondition}
+      />
+      <LanguageModal
+        visible={languageModalVisible}
+        title={'Change Language'}
+        onClose={hideLanguageAlert}
+        buttonOne={'English'}
+        buttonOneAction={changeLanguageToEnglish}
+        buttonTwo={'Hindi'}
+        buttonTwoAction={changeLanguageToHindi}
       />
     </View>
   );
