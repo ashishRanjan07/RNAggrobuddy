@@ -85,7 +85,7 @@ const ProfileList = () => {
         {/* Order and Booking */}
         <View style={styles.contentHolder}>
           <View style={styles.headerHolder}>
-            <Text style={styles.headerText}>Order and Booking</Text>
+            <Text style={styles.headerText}>{string.orderAndBooking}</Text>
           </View>
           <TouchableOpacity style={styles.listHolder}>
             <View style={styles.iconHolder}>
@@ -94,7 +94,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Orders</Text>
+              <Text style={styles.listText}>{string.orders}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -109,7 +109,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Soil Test Booking</Text>
+              <Text style={styles.listText}>{string.soilTestBooking}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -121,7 +121,7 @@ const ProfileList = () => {
         {/* Weather and Expert Suggestions */}
         <View style={styles.contentHolder}>
           <View style={styles.headerHolder}>
-            <Text style={styles.headerText}>Weather and Expert Suggestion</Text>
+            <Text style={styles.headerText}>{string.weatherAndExpertSuggestion}</Text>
           </View>
           <TouchableOpacity style={styles.listHolder}>
             <View style={styles.iconHolder}>
@@ -130,7 +130,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Weather Alert</Text>
+              <Text style={styles.listText}>{string.weatherAlert}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -145,7 +145,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Connect With Expert</Text>
+              <Text style={styles.listText}>{string.connectWithExpert}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -157,7 +157,7 @@ const ProfileList = () => {
         {/* Earn and Support Suggestions */}
         <View style={styles.contentHolder}>
           <View style={styles.headerHolder}>
-            <Text style={styles.headerText}>Earn and Support</Text>
+            <Text style={styles.headerText}>{string.earnAndSupport}</Text>
           </View>
           <TouchableOpacity style={styles.listHolder} onPress={()=> navigation.navigate('Refer And Earn')}>
             <View style={styles.iconHolder}>
@@ -166,7 +166,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Refer and Earn</Text>
+              <Text style={styles.listText}>{string.referAndEarn}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -181,7 +181,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Chat on Whatsapp</Text>
+              <Text style={styles.listText}>{string.chatOnWhatsapp}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -194,7 +194,7 @@ const ProfileList = () => {
         <View style={styles.contentHolder}>
           <View style={styles.headerHolder}>
             <Text style={styles.headerText}>
-              Latest Mandi News and Rate List
+             {string.latestMandiNewsAndRateList}
             </Text>
           </View>
           <TouchableOpacity style={styles.listHolder}>
@@ -204,7 +204,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Latest News</Text>
+              <Text style={styles.listText}>{string.latestNews}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -219,7 +219,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Rate List</Text>
+              <Text style={styles.listText}>{string.rateList}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -231,7 +231,7 @@ const ProfileList = () => {
         {/* Accounts */}
         <View style={styles.contentHolder}>
           <View style={styles.headerHolder}>
-            <Text style={styles.headerText}>Accounts</Text>
+            <Text style={styles.headerText}>{string.accounts}</Text>
           </View>
           <TouchableOpacity
             style={styles.listHolder}
@@ -242,7 +242,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Change Language</Text>
+              <Text style={styles.listText}>{string.changeLanguage}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -257,7 +257,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Change Mode</Text>
+              <Text style={styles.listText}>{string.changeMode}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -274,7 +274,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Saved Address</Text>
+              <Text style={styles.listText}>{string.savedAddress}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -291,7 +291,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Terms and Conditions</Text>
+              <Text style={styles.listText}>{string.termsAndConditions}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -308,7 +308,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Privacy Policy</Text>
+              <Text style={styles.listText}>{string.privacyPolicy}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -325,7 +325,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Account Deletion Request</Text>
+              <Text style={styles.listText}>{string.accountDeletionRequest}</Text>
             </View>
             <Feather
               name="chevron-right"
@@ -340,7 +340,7 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>Logout</Text>
+              <Text style={styles.listText}>{string.logout}</Text>
             </View>
             <Feather
               name="chevron-right"
