@@ -5,28 +5,32 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import AppColor from '../../../constant/AppColor';
 import {responsive} from '../../../constant/Responsive';
 import LottieView from 'lottie-react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
-import { useSelector } from 'react-redux';
-import translations from '../../../constant/String'
+import {useSelector} from 'react-redux';
+import translations from '../../../constant/String';
+import Clipboard from '@react-native-clipboard/clipboard';
+
 const ReferAndEarn = () => {
   const language = useSelector(state => state.language);
   const string = translations[language];
+  const [copiedText, setCopiedText] = useState(false);
+
+  const copyReferralLink = () => {
+    Clipboard.setString('https://aggrobuddy.com/ashish07');
+    setCopiedText(true);
+  };
   return (
     <ScrollView style={styles.main}>
       <View style={styles.upperViewHolder}>
         <Text style={styles.headerText}>{string.headerText}</Text>
-        <Text style={styles.subHeader}>
-         {string.subHeaderText}
-        </Text>
-        <Text style={styles.subHeader2}>
-          {string.subHeaderText2}
-        </Text>
+        <Text style={styles.subHeader}>{string.subHeaderText}</Text>
+        <Text style={styles.subHeader2}>{string.subHeaderText2}</Text>
       </View>
       <LottieView
         source={require('../../../assets/animation/Refer.json')}
@@ -38,12 +42,10 @@ const ReferAndEarn = () => {
       {/* Referral Link */}
       <View style={styles.linkHolder}>
         <Text style={styles.subHeader}>{string.referralLinkText}</Text>
-        <Text style={styles.subHeader2}>
-         {string.copyLinkText}
-        </Text>
+        <Text style={styles.subHeader2}>{string.copyLinkText}</Text>
         <View style={styles.link}>
           <Text style={styles.linkText}>https://aggrobuddy.com/ashish07</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={copyReferralLink}>
             <Feather
               name="copy"
               size={responsive(25)}
@@ -51,7 +53,9 @@ const ReferAndEarn = () => {
             />
           </TouchableOpacity>
         </View>
-        <Text style={styles.subHeader2}>{string.tapToCopyText}</Text>
+        <Text style={styles.subHeader2}>
+          {copiedText ? 'Linked Copied successfully' : string.tapToCopyText}
+        </Text>
       </View>
       {/* Invite by Social Media Link */}
       <View style={styles.upperViewHolder}>
@@ -151,6 +155,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
     width: '90%',
-    marginVertical:responsive(10)
+    marginVertical: responsive(10),
   },
 });
