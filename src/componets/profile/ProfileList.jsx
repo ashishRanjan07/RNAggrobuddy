@@ -139,7 +139,7 @@ const ProfileList = () => {
           <View style={styles.headerHolder}>
             <Text style={styles.headerText}>{string.weatherAndExpertSuggestion}</Text>
           </View>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity style={styles.listHolder} onPress={() => navigation.navigate('Weather Alert')}>
             <View style={styles.iconHolder}>
               <MaterialCommunityIcons
                 name="weather-cloudy"
