@@ -12,6 +12,7 @@ import PrivacyPolicy from '../../../componets/profile/PrivacyPolicy';
 import Address from '../../../componets/profile/Address';
 import EditAddressForm from '../../../componets/profile/EditAddressForm';
 import ReferAndEarn from '../../../screens/AppScreens/Profile/ReferAndEarn';
+import Weather from '../../../componets/profile/Weather';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,7 @@ const AuthNavigation = () => {
         <Stack.Screen name='Save and Add Address' component={Address} options={{headerShown:true}}/>
         <Stack.Screen name="Edit Address" component={EditAddressForm} options={{headerShown:true}}/>
         <Stack.Screen name="Refer And Earn" component={ReferAndEarn} options={{headerShown:true}}/>
+        <Stack.Screen name="Weather Alert" component={Weather} options={{headerShown:false}}/>
 
     </Stack.Navigator>
   )
