@@ -229,7 +229,7 @@ const ProfileList = () => {
               {string.latestMandiNewsAndRateList}
             </Text>
           </View>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity style={styles.listHolder} onPress={()=> navigation.navigate('Latest News')} >
             <View style={styles.iconHolder}>
               <Ionicons
                 name="newspaper-outline"
