@@ -77,6 +77,7 @@ const en = {
   privacyPolicy: 'Privacy Policy',
   accountDeletionRequest: 'Account Deletion Request',
   logout: 'Logout',
+  ctitle:'Connect With Krishi Expert'
 };
 
 const hi = {
@@ -157,6 +158,7 @@ const hi = {
   privacyPolicy: 'गोपनीयता नीति',
   accountDeletionRequest: 'खाते की मांग की मांग',
   logout: 'लॉगआउट',
+  ctitle:'कृषि विशेषज्ञ से जुड़ें'
 };
 
 export default {en, hi};

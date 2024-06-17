@@ -21,16 +21,19 @@ import {useNavigation} from '@react-navigation/native';
 import AccountDeletionModal from '../AccountDeletionModal';
 import TermsAndConditionModal from '../TermsAndConditionModal';
 import LanguageModal from '../LanguageModal';
-import { useDispatch, useSelector } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import translations from '../../constant/String';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { changeLanguage } from '../../redux/action/Action';
+import {changeLanguage} from '../../redux/action/Action';
+import ConnectWithExpert from '../ConnectWithExpert';
 const ProfileList = () => {
   const navigation = useNavigation();
   const [alertVisible, setAlertVisible] = useState(false);
   const [deletionModalVisible, setDeletionModalVisible] = useState(false);
   const [TermAndConditionVisible, setTermAndConditionVisible] = useState(false);
   const [languageModalVisible, setLanguageModalVisible] = useState(false);
+  const [connectWithExpertVisible, setConnectWithExpertVisible] =
+    useState(false);
   const dispatch = useDispatch();
   const language = useSelector(state => state.language);
   const string = translations[language];
@@ -42,6 +45,10 @@ const ProfileList = () => {
     setTermAndConditionVisible(true);
   };
 
+  const hideConnectWithExpertModal = () => {
+    setConnectWithExpertVisible(false);
+  };
+
   const hideTermAndConditionModal = () => {
     setTermAndConditionVisible(false);
   };
@@ -51,6 +58,9 @@ const ProfileList = () => {
 
   const handleAcceptTermAndCondition = () => {
     hideTermAndConditionModal();
+  };
+  const handleConnectWithExpert = () => {
+    hideConnectWithExpertModal();
   };
   const handleAccountDeletionConfirm = () => {
     hideDeletionModal();
@@ -65,13 +75,13 @@ const ProfileList = () => {
   const handleLogout = () => {
     navigation.push('Splash');
   };
-  const changeLanguageToEnglish =async () => {
+  const changeLanguageToEnglish = async () => {
     // console.log('English');
     dispatch(changeLanguage('en'));
     setLanguageModalVisible(false);
     await AsyncStorage.setItem('language', 'en');
   };
-  const changeLanguageToHindi = async() => {
+  const changeLanguageToHindi = async () => {
     // console.log('Hindi');
     dispatch(changeLanguage('hi'));
     setLanguageModalVisible(false);
@@ -80,8 +90,6 @@ const ProfileList = () => {
   const hideLanguageAlert = () => {
     setLanguageModalVisible(false);
   };
-
-
 
   const openWhatsApp = () => {
     const Ph = `+91${6206416452}`;
@@ -137,9 +145,13 @@ const ProfileList = () => {
         {/* Weather and Expert Suggestions */}
         <View style={styles.contentHolder}>
           <View style={styles.headerHolder}>
-            <Text style={styles.headerText}>{string.weatherAndExpertSuggestion}</Text>
+            <Text style={styles.headerText}>
+              {string.weatherAndExpertSuggestion}
+            </Text>
           </View>
-          <TouchableOpacity style={styles.listHolder} onPress={() => navigation.navigate('Weather Alert')}>
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={() => navigation.navigate('Weather Alert')}>
             <View style={styles.iconHolder}>
               <MaterialCommunityIcons
                 name="weather-cloudy"
@@ -154,7 +166,9 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={() => setConnectWithExpertVisible(true)}>
             <View style={styles.iconHolder}>
               <MaterialIcons
                 name="connect-without-contact"
@@ -175,7 +189,9 @@ const ProfileList = () => {
           <View style={styles.headerHolder}>
             <Text style={styles.headerText}>{string.earnAndSupport}</Text>
           </View>
-          <TouchableOpacity style={styles.listHolder} onPress={()=> navigation.navigate('Refer And Earn')}>
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={() => navigation.navigate('Refer And Earn')}>
             <View style={styles.iconHolder}>
               <Ionicons
                 name="share-outline"
@@ -210,7 +226,7 @@ const ProfileList = () => {
         <View style={styles.contentHolder}>
           <View style={styles.headerHolder}>
             <Text style={styles.headerText}>
-             {string.latestMandiNewsAndRateList}
+              {string.latestMandiNewsAndRateList}
             </Text>
           </View>
           <TouchableOpacity style={styles.listHolder}>
@@ -341,7 +357,9 @@ const ProfileList = () => {
                 size={responsive(25)}
                 color={AppColor.black}
               />
-              <Text style={styles.listText}>{string.accountDeletionRequest}</Text>
+              <Text style={styles.listText}>
+                {string.accountDeletionRequest}
+              </Text>
             </View>
             <Feather
               name="chevron-right"
@@ -382,6 +400,10 @@ const ProfileList = () => {
         visible={TermAndConditionVisible}
         onClose={hideTermAndConditionModal}
         onConfirm={handleAcceptTermAndCondition}
+      />
+      <ConnectWithExpert
+        visible={connectWithExpertVisible}
+        onClose={hideConnectWithExpertModal}
       />
       <LanguageModal
         visible={languageModalVisible}
