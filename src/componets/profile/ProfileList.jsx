@@ -244,7 +244,7 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity style={styles.listHolder} onPress={()=> navigation.navigate('Rate List')}>
             <View style={styles.iconHolder}>
               <Ionicons
                 name="list"

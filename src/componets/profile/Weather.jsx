@@ -72,7 +72,7 @@ const Weather = () => {
       setWeatherData(false);
       setWeather(data);
       storeData('city', loc.name);
-      console.log('got forecast data', data);
+      // console.log('got forecast data', data);
     });
   };
 
