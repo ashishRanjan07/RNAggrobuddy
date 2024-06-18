@@ -126,7 +126,7 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity style={styles.listHolder} onPress={()=> navigation.navigate('Soil Test Booking')}>
             <View style={styles.iconHolder}>
               <Fontisto
                 name="blood-test"
