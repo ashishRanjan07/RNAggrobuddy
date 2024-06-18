@@ -15,6 +15,7 @@ import ReferAndEarn from '../../../screens/AppScreens/Profile/ReferAndEarn';
 import Weather from '../../../componets/profile/Weather';
 import AgricultureNews from '../../../componets/profile/AgricultureNews';
 import RateListWebScrapping from '../../../componets/profile/RateListWebScrapping';
+import SoilTesting from '../../../componets/profile/SoilTesting';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,7 +35,8 @@ const AuthNavigation = () => {
         <Stack.Screen name="Refer And Earn" component={ReferAndEarn} options={{headerShown:true}}/>
         <Stack.Screen name="Weather Alert" component={Weather} options={{headerShown:false}}/>
         <Stack.Screen name='Latest News' component={AgricultureNews} options={{headerShown:false}}/>
-        <Stack.Screen name='Rate List' component={RateListWebScrapping} options={{headerShown:true}}/>
+        <Stack.Screen name='Rate List' component={RateListWebScrapping} options={{headerShown:false}}/>
+        <Stack.Screen name='Soil Test Booking' component={SoilTesting} options={{headerShown:true}}/>
 
     </Stack.Navigator>
   )
