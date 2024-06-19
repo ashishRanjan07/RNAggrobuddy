@@ -10,6 +10,7 @@ import {responsive} from '../../constant/Responsive';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {useSelector} from 'react-redux';
 import translations from '../../constant/String';
+import Shop from '../../screens/AppScreens/Shop/Shop';
 const Tab = createBottomTabNavigator();
 
 const BottomNavigation = () => {
@@ -29,7 +30,10 @@ const BottomNavigation = () => {
             iconName = 'th-large';
           } else if (route.name === string.My_Post) {
             iconName = 'empire';
+          }else if (route.name === string.shop) {
+            iconName = 'shopping-cart';
           }
+
 
           return (
             <View style={styles.tabIconContainer}>
@@ -52,6 +56,8 @@ const BottomNavigation = () => {
             label = string.Learn;
           } else if (route.name === string.My_Post) {
             label = string.My_Post;
+          }else if (route.name === string.shop) {
+            label = string.shop;
           }
 
           return (
@@ -77,6 +83,11 @@ const BottomNavigation = () => {
       <Tab.Screen
         name={string.My_Post}
         component={MyPost}
+        options={{headerShown: false}}
+      />
+      <Tab.Screen
+        name={string.shop}
+        component={Shop}
         options={{headerShown: false}}
       />
       <Tab.Screen

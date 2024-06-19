@@ -16,6 +16,7 @@ import Weather from '../../../componets/profile/Weather';
 import AgricultureNews from '../../../componets/profile/AgricultureNews';
 import RateListWebScrapping from '../../../componets/profile/RateListWebScrapping';
 import SoilTesting from '../../../componets/profile/SoilTesting';
+import ProductDetailsScreens from '../../../componets/shop/ProductDetailsScreens';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,7 @@ const AuthNavigation = () => {
         <Stack.Screen name='Latest News' component={AgricultureNews} options={{headerShown:false}}/>
         <Stack.Screen name='Rate List' component={RateListWebScrapping} options={{headerShown:false}}/>
         <Stack.Screen name='Soil Test Booking' component={SoilTesting} options={{headerShown:true}}/>
+        <Stack.Screen name='Product Details' component={ProductDetailsScreens} options={{headerShown:true}}/>
 
     </Stack.Navigator>
   )
