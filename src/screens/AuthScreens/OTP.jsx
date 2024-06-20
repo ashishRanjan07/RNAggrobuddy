@@ -14,12 +14,15 @@ import React, {useState, useEffect, useRef} from 'react';
 import AppColor from '../../constant/AppColor';
 import LottieView from 'lottie-react-native';
 import {responsive} from '../../constant/Responsive';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import translations from '../../constant/String';
 import {useNavigation} from '@react-navigation/native';
 import Feather from 'react-native-vector-icons/Feather';
 import CustomButton from '../../componets/CustomButton';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { login } from '../../redux/action/Action';
 const OTP = () => {
+  const dispatch = useDispatch();
   const language = useSelector(state => state.language);
   const string = translations[language];
   const navigation = useNavigation();
@@ -79,7 +82,16 @@ const OTP = () => {
       setShowErrorText('Enter exact 4 digit code!');
       return;
     }
-    navigation.navigate('BottomTab');
+    {
+      if (otp === '0510') {
+        await AsyncStorage.setItem('isOTPVerified', 'Yes');
+        dispatch(login('Yes'))
+        navigation.navigate('BottomTab');
+      }else{
+        setShowError(true);
+        setShowErrorText("Enter valid OTP");
+      }
+    }
   };
   const renderInputs = () => {
     return otpArray.map((item, index) => (

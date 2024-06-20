@@ -24,7 +24,7 @@ import LanguageModal from '../LanguageModal';
 import {useDispatch, useSelector} from 'react-redux';
 import translations from '../../constant/String';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {changeLanguage} from '../../redux/action/Action';
+import {changeLanguage, login} from '../../redux/action/Action';
 import ConnectWithExpert from '../ConnectWithExpert';
 const ProfileList = () => {
   const navigation = useNavigation();
@@ -72,8 +72,11 @@ const ProfileList = () => {
   const hideAlert = () => {
     setAlertVisible(false);
   };
-  const handleLogout = () => {
-    navigation.push('Splash');
+  const handleLogout = async () => {
+    console.log("logout clicked")
+    await AsyncStorage.removeItem('isOTPVerified');
+    dispatch(login('No'));
+    console.log("ji")
   };
   const changeLanguageToEnglish = async () => {
     // console.log('English');
@@ -126,7 +129,9 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder} onPress={()=> navigation.navigate('Soil Test Booking')}>
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={() => navigation.navigate('Soil Test Booking')}>
             <View style={styles.iconHolder}>
               <Fontisto
                 name="blood-test"
@@ -229,7 +234,9 @@ const ProfileList = () => {
               {string.latestMandiNewsAndRateList}
             </Text>
           </View>
-          <TouchableOpacity style={styles.listHolder} onPress={()=> navigation.navigate('Latest News')} >
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={() => navigation.navigate('Latest News')}>
             <View style={styles.iconHolder}>
               <Ionicons
                 name="newspaper-outline"
@@ -244,7 +251,9 @@ const ProfileList = () => {
               color={AppColor.black}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.listHolder} onPress={()=> navigation.navigate('Rate List')}>
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={() => navigation.navigate('Rate List')}>
             <View style={styles.iconHolder}>
               <Ionicons
                 name="list"

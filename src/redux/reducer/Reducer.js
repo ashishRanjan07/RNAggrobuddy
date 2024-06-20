@@ -4,7 +4,7 @@ import {CHANGE_LANGUAGE, LOGIN, THEME_CHANGE} from '../action/Action';
 const initialState = {
   language: 'en',
   mode: 'light',
-  isLoggedIn: 'false',
+  isLoggedIn: 'No',
 };
 
 // Reducer
