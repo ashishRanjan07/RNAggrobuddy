@@ -24,7 +24,7 @@ import LanguageModal from '../LanguageModal';
 import {useDispatch, useSelector} from 'react-redux';
 import translations from '../../constant/String';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {changeLanguage, login} from '../../redux/action/Action';
+import {changeLanguage, login, saveData} from '../../redux/action/Action';
 import ConnectWithExpert from '../ConnectWithExpert';
 const ProfileList = () => {
   const navigation = useNavigation();
@@ -76,6 +76,7 @@ const ProfileList = () => {
     console.log("logout clicked")
     await AsyncStorage.removeItem('isOTPVerified');
     dispatch(login('No'));
+    dispatch(saveData('No'));
     console.log("ji")
   };
   const changeLanguageToEnglish = async () => {

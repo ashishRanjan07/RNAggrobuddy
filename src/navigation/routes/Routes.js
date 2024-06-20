@@ -1,23 +1,25 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import Splash from '../../screens/AuthScreens/Splash';
 import AuthNavigation from '../StackNavigation/AuthStack/AuthNavigation';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useSelector} from 'react-redux';
-import BottomNavigation from '../bottomNavigaton/BottomNavigation';
+import AppStack from '../StackNavigation/AppStack/AppStack';
 
 const Routes = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
   const isLoggedInRedux = useSelector(state => state.isLoggedIn);
+  const isSaveData = useSelector(state => state.saveData);
+  console.log(isLoggedInRedux,"Line 13")
   useEffect(() => {
     const fetchLoggedInData = async () => {
       const response2 = await AsyncStorage.getItem('isOTPVerified');
       setIsLoggedIn(response2);
+      console.log(response2,"Line 18")
     };
     fetchLoggedInData();
-  }, [isLoggedIn, isLoggedInRedux]);
+  }, [isSaveData,isLoggedIn, isLoggedInRedux]);
   return (
-    <>{isLoggedIn === null ? <AuthNavigation /> : <BottomNavigation />}</>
+    <>{isLoggedIn === null ? <AuthNavigation /> : <AppStack />}</>
   );
 };
 

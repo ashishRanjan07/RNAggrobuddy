@@ -20,7 +20,7 @@ import {useNavigation} from '@react-navigation/native';
 import Feather from 'react-native-vector-icons/Feather';
 import CustomButton from '../../componets/CustomButton';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { login } from '../../redux/action/Action';
+import { login, saveData } from '../../redux/action/Action';
 const OTP = () => {
   const dispatch = useDispatch();
   const language = useSelector(state => state.language);
@@ -85,8 +85,9 @@ const OTP = () => {
     {
       if (otp === '0510') {
         await AsyncStorage.setItem('isOTPVerified', 'Yes');
-        dispatch(login('Yes'))
-        navigation.navigate('BottomTab');
+        dispatch(login('Yes'));
+        dispatch(saveData('Yes'));
+        navigation.navigate('App Stack');
       }else{
         setShowError(true);
         setShowErrorText("Enter valid OTP");
