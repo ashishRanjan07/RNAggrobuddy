@@ -1,21 +1,22 @@
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {Image, ScrollView, StyleSheet, Text, View, Alert} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import AppColor from '../../constant/AppColor';
 import Swiper from 'react-native-swiper';
 import {responsive} from '../../constant/Responsive';
 import StarRating from 'react-native-star-rating-widget';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import Data from '../../assets/json/Address.json';
 import CustomButton from '../CustomButton';
 import {useNavigation} from '@react-navigation/native';
+import CustomAlert from '../CustomAlert';
+import AddressComponents from './AddressComponents';
 
 const ProductDetailsScreens = ({route}) => {
   const navigation = useNavigation();
-  const [addressData, setAddressData] = useState(Data[0]);
   const {item} = route.params;
   const [rating, setRating] = useState(0);
   const [newPrice, setNewPrice] = useState(0);
   const [discountedAmount, setDiscountedAmount] = useState(0);
+  const [alertVisible, setAlertVisible] = useState(false);
 
   const findAverageRating = reviews => {
     let totalRating = 0;
@@ -23,7 +24,7 @@ const ProductDetailsScreens = ({route}) => {
       totalRating += review.rating;
     });
     const averageRating = totalRating / reviews.length;
-    setRating(averageRating.toFixed(1)); // Set the average rating to the state
+    setRating(averageRating.toFixed(1));
   };
 
   const findNewPrice = promotions => {
@@ -39,15 +40,16 @@ const ProductDetailsScreens = ({route}) => {
     }
   }, [item]);
 
-  const handleAddressChange = () => {
-    console.log('address Change Clicked');
-    navigation.navigate('Save and Add Address');
-  };
   const handelAddToCart = () => {
-    console.log('Add to cart Pressed');
+    setAlertVisible(true);
   };
-  const handelBuyNow = () => {
-    console.log('Buy Noe Button Pressed');
+  const handelBuyNow = (item) => {
+    console.log('Buy Noe Button Pressed',item);
+    navigation.navigate('Buy Now',{item});
+  };
+  const handelSuccess = () => {
+    console.log('Success');
+    setAlertVisible(false);
   };
   return (
     <View style={styles.main}>
@@ -77,7 +79,7 @@ const ProductDetailsScreens = ({route}) => {
             <View style={styles.rating}>
               <StarRating
                 rating={rating}
-                //   onChange={setRating}
+                onChange={setRating}
                 starSize={responsive(25)}
                 color={AppColor.dark_Green}
                 starStyle={{marginHorizontal: 0}}
@@ -135,50 +137,32 @@ const ProductDetailsScreens = ({route}) => {
             </View>
           </View>
           {/* Address  */}
-          <View style={styles.addressHolder}>
-            <View style={{gap: 10}}>
-              <View style={styles.rating}>
-                <Text style={styles.description}>Deliver to: </Text>
-                <Text style={styles.price}>{addressData.Name}</Text>
-                <View
-                  style={{
-                    backgroundColor: AppColor.light_Grey,
-                    borderRadius: responsive(5),
-                    padding: responsive(4),
-                    marginHorizontal: responsive(5),
-                  }}>
-                  <Text style={styles.title}>{addressData.TypeOfAddress}</Text>
-                </View>
-              </View>
-              <Text style={styles.price}>
-                {addressData.HouseNo} {addressData.RoadName} {addressData.City}
-              </Text>
-            </View>
-
-            <CustomButton
-              title={'Change'}
-              handleAction={handleAddressChange}
-              color={AppColor.light_Grey}
-            />
-          </View>
+          <AddressComponents />
         </View>
       </ScrollView>
       <View style={styles.buttonHolder}>
-        <View style={{width:'45%'}}>
-        <CustomButton
-          title={'Add To Cart'}
-          handleAction={handelAddToCart}
-          color={AppColor.dark_Yellow}
-        />
+        <View style={{width: '45%'}}>
+          <CustomButton
+            title={'Add To Cart'}
+            handleAction={handelAddToCart}
+            color={AppColor.dark_Yellow}
+          />
         </View>
-        <View style={{width:'45%'}}>
-        <CustomButton
-          title={'Buy Now'}
-          handleAction={handelBuyNow}
-          color={AppColor.dark_Green}
-        />
+        <View style={{width: '45%'}}>
+          <CustomButton
+            title={'Buy Now'}
+            handleAction={()=>handelBuyNow(item)}
+            color={AppColor.dark_Green}
+          />
         </View>
       </View>
+      <CustomAlert
+        visible={alertVisible}
+        title={'Success'}
+        message={'Product added to cart successfully'}
+        onClose={() => setAlertVisible(!alertVisible)}
+        onConfirm={handelSuccess}
+      />
     </View>
   );
 };
