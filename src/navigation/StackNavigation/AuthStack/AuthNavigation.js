@@ -17,6 +17,7 @@ import AgricultureNews from '../../../componets/profile/AgricultureNews';
 import RateListWebScrapping from '../../../componets/profile/RateListWebScrapping';
 import SoilTesting from '../../../componets/profile/SoilTesting';
 import ProductDetailsScreens from '../../../componets/shop/ProductDetailsScreens';
+import BuyNow from '../../../componets/shop/BuyNow';
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +40,7 @@ const AuthNavigation = () => {
         <Stack.Screen name='Rate List' component={RateListWebScrapping} options={{headerShown:false}}/>
         <Stack.Screen name='Soil Test Booking' component={SoilTesting} options={{headerShown:true}}/>
         <Stack.Screen name='Product Details' component={ProductDetailsScreens} options={{headerShown:true}}/>
+        <Stack.Screen name='Buy Now' component={BuyNow} options={{headerShown:true}}/>
 
     </Stack.Navigator>
   )
