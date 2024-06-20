@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import AppColor from '../../../constant/AppColor';
 import ImagePath from '../../../constant/ImagePath';
 import {responsive} from '../../../constant/Responsive';
@@ -18,13 +18,36 @@ import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CustomButton from '../../../componets/CustomButton';
 import LottieView from 'lottie-react-native';
-import {useSelector} from 'react-redux';
+import { useSelector} from 'react-redux';
 import translations from '../../../constant/String';
 const Login = () => {
   const navigation = useNavigation();
   const [userId, setUserId] = useState('');
+  const [waringText, setWaringText] = useState('');
   const language = useSelector(state => state.language);
   const string = translations[language];
+
+  useEffect(() => {
+    if (userId.length > 0) {
+      setWaringText('');
+    }
+  }, [userId]);
+
+  const handleLogin = async () => {
+    if (userId.trim() === '') {
+      setWaringText('Please enter the valid User Id');
+      return;
+    }
+    try {
+      if (userId === 'aviashishranjan@gmail.com') {
+        // dispatch(login('Yes'));
+        // await AsyncStorage.setItem('isUserId', 'Yes');
+        navigation.navigate('OTP');
+      } else {
+        setWaringText('Invalid Credentials');
+      }
+    } catch (error) {}
+  };
 
   return (
     <View style={styles.main}>
@@ -65,12 +88,13 @@ const Login = () => {
               )}
             </View>
           </View>
+          {waringText && <Text style={styles.waringText}>{waringText}</Text>}
 
           {/* Button */}
           <View style={{width: '90%', alignSelf: 'center'}}>
             <CustomButton
               title={string.loginButton}
-              handleAction={() => navigation.navigate('OTP')}
+              handleAction={handleLogin}
               color={AppColor.white}
             />
           </View>
@@ -180,5 +204,11 @@ const styles = StyleSheet.create({
   icon: {
     width: responsive(200),
     height: responsive(400),
+  },
+  waringText: {
+    fontSize: responsive(18),
+    fontFamily: 'OpenSans-Medium',
+    color: AppColor.warning,
+    textAlign: 'center',
   },
 });

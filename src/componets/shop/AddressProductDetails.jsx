@@ -7,6 +7,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import PriceBreakUp from './PriceBreakUp';
 import CustomButton from '../CustomButton';
+import RazorpayCheckout from 'react-native-razorpay';
 
 const AddressProductDetails = ({item}) => {
   const [rating, setRating] = useState(0);
@@ -41,8 +42,33 @@ const AddressProductDetails = ({item}) => {
       findActualPrice(item.price);
     }
   }, [item, qty]);
+
   const handleBuyNow = () => {
-    console.log('Buy Now Button Clicked');
+    console.log("Buy Now Button CLicked");
+    var options = {
+      description: 'Credits towards consultation',
+      image: require('../../assets/image/imageOne.png'),
+      currency: 'INR',
+      key: 'rzp_test_ihyN942As43mJi', 
+      amount: {newPrice},
+      name: "item.title",
+      prefill: {
+        email: 'aviashishranjan@gmail.com',
+        contact: '6206416452',
+        name: 'Aggrobuddy Farmer Solutions'
+      },
+      theme: {color: '#F37254'}
+    }
+    RazorpayCheckout.open(options).then((data) => {
+      // handle success
+      console.log("step 01")
+      alert(`Success: ${data.razorpay_payment_id}`);
+    }).catch((error) => {
+      // handle failure
+      console.log("step 02")
+      alert(`Error: ${error.code} | ${error.description}`);
+      console.log(error,"line 70")
+    });
   };
 
   return (
