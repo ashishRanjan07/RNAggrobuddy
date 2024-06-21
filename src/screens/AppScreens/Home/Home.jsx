@@ -5,12 +5,14 @@ import HomeHeader from '../../../componets/home/HomeHeader';
 import HomeSearch from '../../../componets/home/HomeSearch';
 import HomeCropPicker from '../../../componets/home/HomeCropPicker';
 import HomeServices from '../../../componets/home/HomeServices';
+import CustomHeader from '../../../componets/CustomHeader';
 
 const Home = () => {
   return (
     <ScrollView style={styles.main}>
       <SafeAreaView style={{backgroundColor: AppColor.primary}} />
       <StatusBar barStyle={'dark-content'} backgroundColor={AppColor.primary} />
+      <CustomHeader title={"Aggrobuddy"}/>
       <HomeHeader />
       <HomeSearch />
       <HomeCropPicker />

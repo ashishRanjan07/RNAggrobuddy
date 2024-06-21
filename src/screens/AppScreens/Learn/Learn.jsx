@@ -13,6 +13,7 @@ import Data from '../../../assets/json/Category.json';
 import AppColor from '../../../constant/AppColor';
 import {responsive} from '../../../constant/Responsive';
 import { useNavigation } from '@react-navigation/native';
+import CustomHeader from '../../../componets/CustomHeader';
 const Learn = () => {
     const navigation = useNavigation();
 //   console.log(Data, 'Line 5');
@@ -32,6 +33,7 @@ const Learn = () => {
     <View style={styles.main}>
       <SafeAreaView style={{backgroundColor: AppColor.primary}} />
       <StatusBar backgroundColor={AppColor.primary} barStyle={'dark-content'} />
+      <CustomHeader title={"Guide"}/>
       <View style={styles.flatListHolder}>
         <FlatList
         showsVerticalScrollIndicator={false}

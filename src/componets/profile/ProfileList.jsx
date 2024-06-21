@@ -26,6 +26,7 @@ import translations from '../../constant/String';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {changeLanguage, login, saveData} from '../../redux/action/Action';
 import ConnectWithExpert from '../ConnectWithExpert';
+import ProfileHeader from './ProfileHeader';
 const ProfileList = () => {
   const navigation = useNavigation();
   const [alertVisible, setAlertVisible] = useState(false);
@@ -41,6 +42,13 @@ const ProfileList = () => {
     setDeletionModalVisible(true);
   };
 
+  const commonFunction = async () => {
+    await AsyncStorage.removeItem('isOTPVerified');
+    dispatch(login('No'));
+    dispatch(saveData('No'));
+    dispatch(changeLanguage('en'))
+    await AsyncStorage.removeItem('language');
+  }
   const showTermsAndConditionModal = () => {
     setTermAndConditionVisible(true);
   };
@@ -64,6 +72,7 @@ const ProfileList = () => {
   };
   const handleAccountDeletionConfirm = () => {
     hideDeletionModal();
+    commonFunction()
   };
   const showAlert = () => {
     setAlertVisible(true);
@@ -74,9 +83,12 @@ const ProfileList = () => {
   };
   const handleLogout = async () => {
     console.log("logout clicked")
-    await AsyncStorage.removeItem('isOTPVerified');
-    dispatch(login('No'));
-    dispatch(saveData('No'));
+    commonFunction()
+    // await AsyncStorage.removeItem('isOTPVerified');
+    // dispatch(login('No'));
+    // dispatch(saveData('No'));
+    // dispatch(changeLanguage('en'))
+    // await AsyncStorage.removeItem('language');
     console.log("ji")
   };
   const changeLanguageToEnglish = async () => {
@@ -111,6 +123,7 @@ const ProfileList = () => {
     <View style={styles.main}>
       <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
         {/* Order and Booking */}
+        <ProfileHeader/>
         <View style={styles.contentHolder}>
           <View style={styles.headerHolder}>
             <Text style={styles.headerText}>{string.orderAndBooking}</Text>

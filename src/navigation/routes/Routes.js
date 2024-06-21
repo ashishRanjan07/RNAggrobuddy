@@ -1,4 +1,3 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import AuthNavigation from '../StackNavigation/AuthStack/AuthNavigation';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -25,4 +24,3 @@ const Routes = () => {
 
 export default Routes;
 
-const styles = StyleSheet.create({});

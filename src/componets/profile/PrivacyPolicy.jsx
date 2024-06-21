@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
         <View style={styles.main}>
             {isLoading && (
                 <View style={styles.loaderContainer}>
-                    <BarIndicator color='white'/>
+                    <BarIndicator color={AppColor.primary}/>
                 </View>
             )}
             <WebView
@@ -43,6 +43,6 @@ const styles = StyleSheet.create({
         bottom: 0,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: AppColor.primary,
+        backgroundColor: AppColor.white,
     },
 });

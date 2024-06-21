@@ -73,8 +73,7 @@ export default ProfileHeader;
 const styles = StyleSheet.create({
   main: {
     backgroundColor: AppColor.dark_Green,
-    borderBottomLeftRadius: responsive(10),
-    borderBottomRightRadius: responsive(10),
+    borderRadius:responsive(10)
   },
   HeaderHolder: {
     flexDirection: 'row',

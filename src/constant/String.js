@@ -45,7 +45,7 @@ const en = {
   compliance:
     'We comply with all applicable agricultural standards and regulations.',
   updates: 'We reserve the right to update these terms at any time.',
-  contactUs: 'For inquiries, contact us at support@example.com.',
+  contactUs: 'For inquiries, contact us at aviashishranjan@gmail.com.',
   headerText: 'Chance to Earn Extra!',
   subHeaderText: 'Invite your Farmer Friends to Aggrobuddy',
   subHeaderText2:
@@ -127,7 +127,7 @@ const hi = {
     'हम आपके डेटा की सुरक्षा के लिए मजबूत सुरक्षा उपाय करते हैं।',
   compliance: 'हम सभी लागू कृषि मानकों और नियमों का पालन करते हैं।',
   updates: 'हम इन शर्तों को किसी भी समय अपडेट करने का अधिकार रखते हैं।',
-  contactUs: 'संपर्क के लिए, हमें support@example.com पर ईमेल करें।',
+  contactUs: 'संपर्क के लिए, हमें aviashishranjan@gmail.com.com पर ईमेल करें।',
   headerText: 'अतिरिक्त कमाने का अवसर!',
   subHeaderText: 'अपने किसान दोस्तों को अग्रोबड्डी में आमंत्रित करें',
   subHeaderText2:
