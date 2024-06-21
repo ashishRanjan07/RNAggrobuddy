@@ -9,7 +9,7 @@ const Profile = () => {
     <View style={styles.main}>
       <SafeAreaView style={styles.safeArea}/>
       <StatusBar backgroundColor={AppColor.primary} barStyle={"dark-content"}/>
-      <ProfileHeader/>
+     
       <ProfileList/>
     </View>
   )

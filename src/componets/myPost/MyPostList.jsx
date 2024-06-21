@@ -28,39 +28,46 @@ const MyPostList = ({data}) => {
     return (
       <View style={styles.renderView}>
         <View style={styles.innerView}>
-          <Swiper
-            autoplay={true}
-            autoplayTimeout={2} // Change this line
-            style={styles.swiper}
-            showsPagination={false}>
-            {item.images.map((image, index) => (
-              <Image
-                key={index}
-                source={{uri: image}}
-                resizeMode="cover"
-                style={styles.imageStyle}
-              />
-            ))}
-          </Swiper>
+          <View style={{width: '40%'}}>
+            <Swiper
+              autoplay={true}
+              autoplayTimeout={2}
+              style={styles.swiper}
+              showsPagination={false}>
+              {item.images.map((image, index) => (
+                <Image
+                  key={index}
+                  source={{uri: image}}
+                  resizeMode="cover"
+                  style={styles.imageStyle}
+                />
+              ))}
+            </Swiper>
+          </View>
+
           <View style={styles.descriptionHolder}>
             <Text style={styles.productName}>{item.name}</Text>
             <Text style={styles.description}>
               {truncateText(item.description, 20)}
             </Text>
-            <View style={styles.view}>
-              <TouchableOpacity style={styles.button}>
-                <Text style={styles.price}>{item.price}</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.button}>
-                <Text style={styles.price}>{item.quantity}</Text>
-              </TouchableOpacity>
-            </View>
           </View>
         </View>
+        <View style={styles.view}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.price}>{item.price}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.price}>{item.quantity}</Text>
+          </TouchableOpacity>
+        </View>
         <TouchableOpacity
-          style={styles.button}
+          style={[styles.button, {width: '100%'}]}
           onPress={() =>
-            navigation.push('Add Product', {title: 'Edit Product',edit:true,data:item})
+            navigation.push('Add Product', {
+              title: 'Edit Product',
+              edit: true,
+              data: item,
+            })
           }>
           <Text style={styles.edit}>View/ Edit Products</Text>
         </TouchableOpacity>
@@ -118,7 +125,7 @@ const styles = StyleSheet.create({
   },
   descriptionHolder: {
     padding: 10,
-    width: responsive(225),
+    width: '55%',
     gap: responsive(10),
   },
   description: {
@@ -138,6 +145,9 @@ const styles = StyleSheet.create({
     borderRadius: responsive(10),
     backgroundColor: AppColor.dark_Yellow,
     alignItems: 'center',
+    marginVertical: responsive(10),
+    width: '45%',
+    alignSelf: 'center',
   },
   edit: {
     fontSize: responsive(18),
@@ -146,7 +156,8 @@ const styles = StyleSheet.create({
   },
   view: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center',
+    width: '100%',
   },
 });

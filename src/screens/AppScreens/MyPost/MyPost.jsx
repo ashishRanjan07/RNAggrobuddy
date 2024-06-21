@@ -14,6 +14,7 @@ import Data from '../../../assets/json/MyPost.json';
 import {responsive} from '../../../constant/Responsive';
 import Octicons from 'react-native-vector-icons/Octicons';
 import {useNavigation} from '@react-navigation/native';
+import CustomHeader from '../../../componets/CustomHeader';
 const MyPost = () => {
   const navigation = useNavigation();
 
@@ -21,7 +22,7 @@ const MyPost = () => {
     <View style={styles.main}>
       <SafeAreaView style={styles.safeArea} />
       <StatusBar barStyle={'dark-content'} backgroundColor={AppColor.primary} />
-      {/* <MyPostHeader/> */}
+      <CustomHeader title={"My Post"}/>
       <MyPostList data={Data} />
       <TouchableOpacity
         style={styles.floatingButton}
