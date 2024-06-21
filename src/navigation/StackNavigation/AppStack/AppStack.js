@@ -14,6 +14,8 @@ import RateListWebScrapping from '../../../componets/profile/RateListWebScrappin
 import SoilTesting from '../../../componets/profile/SoilTesting';
 import ProductDetailsScreens from '../../../componets/shop/ProductDetailsScreens';
 import BuyNow from '../../../componets/shop/BuyNow';
+import CropDoctor from '../../../componets/home/CropDoctor';
+import Insurance from '../../../componets/insurance/Insurance';
 
 
 const Stack = createNativeStackNavigator();
@@ -30,10 +32,12 @@ const AppStack = () => {
         <Stack.Screen name="Refer And Earn" component={ReferAndEarn} options={{headerShown:true}}/>
         <Stack.Screen name="Weather Alert" component={Weather} options={{headerShown:false}}/>
         <Stack.Screen name='Latest News' component={AgricultureNews} options={{headerShown:false}}/>
-        <Stack.Screen name='Rate List' component={RateListWebScrapping} options={{headerShown:false}}/>
+        <Stack.Screen name='Rate List' component={RateListWebScrapping} options={{headerShown:true}}/>
         <Stack.Screen name='Soil Test Booking' component={SoilTesting} options={{headerShown:true}}/>
         <Stack.Screen name='Product Details' component={ProductDetailsScreens} options={{headerShown:true}}/>
         <Stack.Screen name='Buy Now' component={BuyNow} options={{headerShown:true}}/>
+        <Stack.Screen name='Crop Doctor' component={CropDoctor} options={{headerShown:true}}/>
+        <Stack.Screen name='Insurance' component={Insurance} options={{headerShown:true}}/>
 
   </Stack.Navigator>
   )

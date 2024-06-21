@@ -13,7 +13,8 @@ const AppColor = {
   secondary:'#F0F3F9',
   light_Grey:'#C4C4C4',
   dark_Grey:'#949191',
-  blue:'#0000FF'
+  blue:'#0000FF',
+  dim_Grey:'#D3D3D3'
 };
 
 export default AppColor;
