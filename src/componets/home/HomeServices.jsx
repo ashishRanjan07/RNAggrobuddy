@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     elevation: responsive(10),
     padding: responsive(10),
     paddingHorizontal: responsive(15),
+    marginBottom:responsive(10)
   },
   label: {
     fontSize: responsive(22),

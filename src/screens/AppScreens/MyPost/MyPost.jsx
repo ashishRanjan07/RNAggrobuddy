@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AppColor from '../../../constant/AppColor';
 import MyPostHeader from '../../../componets/myPost/MyPostHeader';
 import MyPostList from '../../../componets/myPost/MyPostList';
@@ -18,12 +18,30 @@ import CustomHeader from '../../../componets/CustomHeader';
 const MyPost = () => {
   const navigation = useNavigation();
 
+  const [filteredData, setFilteredData] = useState([]);
+  const [originalData, setOriginalData] = useState([]);
+
+  useEffect(() => {
+    setFilteredData(Data.products);
+    setOriginalData(Data.products);
+  }, []);
+
+  const handleSearch = (text) => {
+    if (!text || text === '') {
+      setFilteredData(originalData);
+    } else {
+      const newData = originalData.filter(item =>
+        item.name.toLowerCase().includes(text.toLowerCase())
+      );
+      setFilteredData(newData);
+    }
+  };
   return (
     <View style={styles.main}>
       <SafeAreaView style={styles.safeArea} />
       <StatusBar barStyle={'dark-content'} backgroundColor={AppColor.primary} />
-      <CustomHeader title={"My Post"}/>
-      <MyPostList data={Data} />
+      <CustomHeader title={"My Post"} onSearch={handleSearch}/>
+      <MyPostList data={filteredData} />
       <TouchableOpacity
         style={styles.floatingButton}
         onPress={() => navigation.push('Add Product', {title: 'Add Product'})}>

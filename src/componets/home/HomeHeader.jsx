@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: AppColor.white,
     borderRadius:responsive(10),
-    marginBottom:responsive(10),
+    marginVertical:responsive(10),
     elevation:responsive(10),
     width:'95%',
     alignSelf:'center'
