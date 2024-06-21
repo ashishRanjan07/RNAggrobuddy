@@ -9,7 +9,7 @@ import CustomHeader from '../../../componets/CustomHeader';
 
 const Home = () => {
   return (
-    <ScrollView style={styles.main}>
+    <ScrollView style={styles.main} showsVerticalScrollIndicator={false}>
       <SafeAreaView style={{backgroundColor: AppColor.primary}} />
       <StatusBar barStyle={'dark-content'} backgroundColor={AppColor.primary} />
       <CustomHeader title={"Aggrobuddy"}/>

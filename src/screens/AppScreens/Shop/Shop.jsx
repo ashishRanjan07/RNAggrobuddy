@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   FlatList,
   Image,
@@ -19,6 +19,26 @@ import {useNavigation} from '@react-navigation/native';
 
 const Shop = () => {
   const navigation = useNavigation();
+  const [filteredData, setFilteredData] = useState([]);
+  const [originalData, setOriginalData] = useState([]);
+
+  useEffect(() => {
+    setFilteredData(Data.products);
+    setOriginalData(Data.products);
+  }, []);
+
+  const handleSearch = (text) => {
+    if (!text || text === '') {
+      setFilteredData(originalData);
+    } else {
+      const newData = originalData.filter(item =>
+        item.title.toLowerCase().includes(text.toLowerCase())
+      );
+      setFilteredData(newData);
+    }
+  };
+
+
   const renderItem = ({item}) => {
     return (
       <TouchableOpacity
@@ -53,15 +73,17 @@ const Shop = () => {
     );
   };
 
+
+
   return (
     <View style={styles.main}>
       <SafeAreaView style={{backgroundColor: AppColor.primary}} />
       <StatusBar backgroundColor={AppColor.primary} barStyle={'dark-content'} />
-      <CustomHeader title={'Shop with Us'} />
+      <CustomHeader title={'Shop with Us'} onSearch={handleSearch} />
       <View style={styles.flatListHolder}>
         <FlatList
           showsVerticalScrollIndicator={false}
-          data={Data.products}
+          data={filteredData}
           renderItem={renderItem}
           keyExtractor={item => item.id.toString()}
           numColumns={2}
@@ -92,7 +114,7 @@ const styles = StyleSheet.create({
     height: responsive(150),
     alignItems: 'center',
     alignSelf: 'center',
-    borderWidth:2,
+    borderWidth: 2,
   },
   imageStyle: {
     width: responsive(150),
@@ -107,7 +129,7 @@ const styles = StyleSheet.create({
   lowerViewHolder: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap:10,
+    gap: 10,
     justifyContent: 'space-between',
   },
   priceText: {

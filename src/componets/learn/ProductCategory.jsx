@@ -8,13 +8,32 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import CustomHeader from '../CustomHeader';
 import AppColor from '../../constant/AppColor';
 import {responsive} from '../../constant/Responsive';
 
 const ProductCategory = ({route}) => {
   const {item} = route.params;
+
+  const [filteredData, setFilteredData] = useState([]);
+  const [originalData, setOriginalData] = useState([]);
+
+  useEffect(() => {
+    setFilteredData(item?.products);
+    setOriginalData(item?.products);
+  }, []);
+  const handleSearch = text => {
+    if (!text || text === '') {
+      setFilteredData(originalData);
+    } else {
+      const newData = originalData.filter(item =>
+        item.name.toLowerCase().includes(text.toLowerCase()),
+      );
+      setFilteredData(newData);
+    }
+  };
+
   const renderItem = ({item}) => {
     return (
       <TouchableOpacity style={styles.renderHolder} key={item.id}>
@@ -31,11 +50,11 @@ const ProductCategory = ({route}) => {
     <View style={styles.main}>
       <SafeAreaView style={{backgroundColor: AppColor.primary}} />
       <StatusBar backgroundColor={AppColor.primary} barStyle={'dark-content'} />
-      <CustomHeader title={item.name} />
+      <CustomHeader title={item.name} onSearch={handleSearch} />
       <View style={styles.flatListHolder}>
         <FlatList
           showsVerticalScrollIndicator={false}
-          data={item.products}
+          data={filteredData}
           renderItem={renderItem}
           keyExtractor={item => item.id}
           numColumns={2}
@@ -74,12 +93,12 @@ const styles = StyleSheet.create({
   image: {
     height: responsive(125),
     width: responsive(150),
-    borderRadius:responsive(10)
+    borderRadius: responsive(10),
   },
   text: {
     fontSize: responsive(18),
     color: AppColor.dark_Green,
     fontFamily: 'OpenSans-Bold',
-    textAlign:'center',
+    textAlign: 'center',
   },
 });

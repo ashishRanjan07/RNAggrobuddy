@@ -13,7 +13,7 @@ import AppColor from '../../constant/AppColor';
 import {useNavigation} from '@react-navigation/native';
 
 const MyPostList = ({data}) => {
-  //   console.log(data, 'Line 5');
+    // console.log(data, 'Line 5');
   const navigation = useNavigation();
 
   const truncateText = (text, limit) => {
@@ -79,7 +79,7 @@ const MyPostList = ({data}) => {
     <View style={styles.main}>
       <FlatList
         showsVerticalScrollIndicator={false}
-        data={data.products}
+        data={data}
         renderItem={renderItem}
         keyExtractor={(item, index) => index.toString()}
       />

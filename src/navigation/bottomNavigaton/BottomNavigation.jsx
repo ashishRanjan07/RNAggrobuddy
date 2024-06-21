@@ -71,10 +71,8 @@ const BottomNavigation = () => {
           );
         },
         tabBarStyle: {
-          borderTopLeftRadius: responsive(15),
-          borderTopRightRadius: responsive(15),
           height: responsive(75),
-          backgroundColor: AppColor.primary,
+          backgroundColor: AppColor.white,
         },
         tabBarActiveTintColor: AppColor.light_Green,
         tabBarInactiveTintColor: AppColor.light_Grey,
