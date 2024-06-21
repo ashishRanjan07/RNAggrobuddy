@@ -10,5 +10,11 @@ export default Images = {
     weather:require('../assets/image/weather.png'),
     farmerProgram:require('../assets/image/farmerProgram.jpg'),
     mandiPrice:require('../assets/image/mandiPrice.jpg'),
-    nearStore:require('../assets/image/store.jpg')
+    nearStore:require('../assets/image/store.jpg'),
+    coin:require('../assets/image/coin.png'),
+    min:require('../assets/image/min.png'),
+    digital:require('../assets/image/digital.png'),
+    damage:require('../assets/image/damage.jpg'),
+    satelite:require('../assets/image/satelite.png'),
+    asr:require('../assets/image/asr.png')
 }
