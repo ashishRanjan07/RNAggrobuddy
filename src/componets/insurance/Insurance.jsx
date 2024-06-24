@@ -16,7 +16,9 @@ import InsuranceBenefitsCard from './InsuranceBenefitsCard';
 import ImagePath from '../../constant/ImagePath';
 import InsuranceStep from './InsuranceStep';
 import InsuranceClaimProcess from './InsuranceClaimProcess';
+import { useNavigation } from '@react-navigation/native';
 const Insurance = () => {
+  const navigation = useNavigation();
     const [showNeedHelp,setShowNeedHelp] = useState(false);
     if(showNeedHelp){
         Alert.alert("Need Help","Call on 6206416452")
@@ -41,7 +43,7 @@ const Insurance = () => {
         </View>
         <TouchableOpacity
           style={styles.viewHolder}
-          onPress={() => console.log('Navigate to KYC DETAILS Page')}>
+          onPress={() => navigation.navigate('KYC')}>
           <View style={styles.innerView}>
             <AntDesign
               name="idcard"

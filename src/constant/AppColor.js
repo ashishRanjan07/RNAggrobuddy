@@ -14,7 +14,8 @@ const AppColor = {
   light_Grey:'#C4C4C4',
   dark_Grey:'#949191',
   blue:'#0000FF',
-  dim_Grey:'#D3D3D3'
+  dim_Grey:'#D3D3D3',
+  light_Blue:'#d4ebf2'
 };
 
 export default AppColor;
