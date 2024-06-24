@@ -30,10 +30,9 @@ const BottomNavigation = () => {
             iconName = 'th-large';
           } else if (route.name === string.My_Post) {
             iconName = 'empire';
-          }else if (route.name === string.shop) {
+          } else if (route.name === string.shop) {
             iconName = 'shopping-cart';
           }
-
 
           return (
             <View style={styles.tabIconContainer}>
@@ -56,7 +55,7 @@ const BottomNavigation = () => {
             label = string.Learn;
           } else if (route.name === string.My_Post) {
             label = string.My_Post;
-          }else if (route.name === string.shop) {
+          } else if (route.name === string.shop) {
             label = string.shop;
           }
 
@@ -76,8 +75,13 @@ const BottomNavigation = () => {
         },
         tabBarActiveTintColor: AppColor.light_Green,
         tabBarInactiveTintColor: AppColor.light_Grey,
+        tabBarHideOnKeyboard:true
       })}>
-      <Tab.Screen name={string.Home} component={Home} options={{headerShown: false}} />
+      <Tab.Screen
+        name={string.Home}
+        component={Home}
+        options={{headerShown: false}}
+      />
       <Tab.Screen
         name={string.My_Post}
         component={MyPost}
