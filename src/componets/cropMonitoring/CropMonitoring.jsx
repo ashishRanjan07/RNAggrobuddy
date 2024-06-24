@@ -15,12 +15,12 @@ import AppColor from '../../constant/AppColor';
 import CustomButton from '../CustomButton';
 import {useNavigation} from '@react-navigation/native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { launchCamera } from 'react-native-image-picker';
+import {launchCamera} from 'react-native-image-picker';
 
 const CropMonitoring = () => {
   const navigation = useNavigation();
   const [alertVisible, setAlertVisible] = useState(false);
-  const [groundImage,setGroundImage] = useState('');
+  const [groundImage, setGroundImage] = useState('');
 
   const showAlert = () => {
     setAlertVisible(true);
@@ -49,7 +49,7 @@ const CropMonitoring = () => {
         } else {
           let imageUri = response.uri || response.assets[0]?.uri;
           setGroundImage(imageUri);
-          hideAlert()
+          hideAlert();
         }
       });
     } catch (error) {
