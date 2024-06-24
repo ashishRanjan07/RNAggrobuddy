@@ -18,7 +18,7 @@ const HomeServices = () => {
         <ServiceCard title={'Crop Doctor'} image={ImagePath.cropDoctor} handleAction={()=> navigation.navigate('Crop Doctor')} />
         <ServiceCard title={'Weather'} image={ImagePath.weather} handleAction={()=>navigation.navigate('Weather Alert')} />
         <ServiceCard title={'Soil Testing'} image={ImagePath.soilTest} handleAction={()=>navigation.navigate('Soil Test Booking')} />
-        <ServiceCard title={'Crop Monitoring'} image={ImagePath.cropMonitor} handleAction={()=>{}} />
+        <ServiceCard title={'Crop Monitoring'} image={ImagePath.cropMonitor} handleAction={()=>navigation.navigate('Crop Monitoring')} />
         <ServiceCard title={'Crop Insurance'} image={ImagePath.cropInsurance} handleAction={()=>navigation.navigate('Insurance')} />
         <ServiceCard title={'Nearest Store'} image={ImagePath.nearStore} handleAction={()=>{}} />
       </View>
