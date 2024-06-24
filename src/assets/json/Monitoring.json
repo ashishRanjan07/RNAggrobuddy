@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "heading": "About the service",
+    "topic": [
+      {
+        "id": 1,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvtu3NV8Dl1ikobfbHPiLHZuF33Xzzcyi_MA&s",
+        "description": "Crop health and soil quality information through satellite mapping."
+      },
+      {
+        "id": 2,
+        "image": "https://previews.123rf.com/images/artursz/artursz2003/artursz200306613/141740689-writing-note-showing-daily-report-business-concept-for-document-containing-information-of-of.jpg",
+        "description": "New report every 5 days."
+      },
+      {
+        "id": 3,
+        "image": "https://static.vecteezy.com/system/resources/previews/012/994/657/original/call-center-agent-of-customer-service-or-hotline-operator-with-headsets-and-computers-in-flat-cartoon-hand-drawn-templates-illustration-vector.jpg",
+        "description": "Problem solving by Agriculture Expert."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "heading": "Benefits of Satellite Mapping Service",
+    "topic": [
+      {
+        "id": 1,
+        "image": "https://img.freepik.com/premium-photo/male-hands-touching-soil-field-expert-hand-farmer-checking-soil-health-before-growth_217236-18898.jpg",
+        "description": "Crop health while sitting at home."
+      },
+      {
+        "id": 2,
+        "image": "https://th.bing.com/th/id/OIP.MaUU8n-PB58YxB2q0l25NQHaFj?rs=1&pid=ImgDetMain",
+        "description": "Timely detection and prevention of disease."
+      },
+      {
+        "id": 3,
+        "image": "https://th.bing.com/th/id/OIP.81BYG3D4-D1ES2mBCp3x1wAAAA?rs=1&pid=ImgDetMain",
+        "description": "Save cost."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "heading": "How to use the feature",
+    "topic": [
+      {
+        "id": 1,
+        "image": "https://media.istockphoto.com/id/1259927488/vector/young-happy-man-taking-selfie-photo-on-smartphone-male-face-portrait-on-cellphone-screen.jpg?s=612x612&w=0&k=20&c=kmsZ1SI6-tvl1ICwubdKXHVPFt8DTocXe7PP_Xg5myk=",
+        "description": "Go the middle of the filed and take a selfie with the farm."
+      },
+      {
+        "id": 2,
+        "image": "https://th.bing.com/th/id/OIP.n7-z7MPmaD9PpodbeUfR-AHaE7?rs=1&pid=ImgDetMain",
+        "description": "Name the farm."
+      },
+      {
+        "id": 3,
+        "image": "https://th.bing.com/th/id/OIP.kT5qPhJt1MQS1DIXbd2ZMgHaE7?rs=1&pid=ImgDetMain",
+        "description": "add your crop."
+      }
+    ]
+  }
+]
