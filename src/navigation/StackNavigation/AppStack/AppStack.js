@@ -16,6 +16,9 @@ import ProductDetailsScreens from '../../../componets/shop/ProductDetailsScreens
 import BuyNow from '../../../componets/shop/BuyNow';
 import CropDoctor from '../../../componets/home/CropDoctor';
 import Insurance from '../../../componets/insurance/Insurance';
+import KYC from '../../../componets/insurance/KYC';
+import IdentityProofVerication from '../../../componets/insurance/IdentityProofVerication';
+import BankVerification from '../../../componets/insurance/BankVerification';
 
 
 const Stack = createNativeStackNavigator();
@@ -38,6 +41,9 @@ const AppStack = () => {
         <Stack.Screen name='Buy Now' component={BuyNow} options={{headerShown:true}}/>
         <Stack.Screen name='Crop Doctor' component={CropDoctor} options={{headerShown:true}}/>
         <Stack.Screen name='Insurance' component={Insurance} options={{headerShown:true}}/>
+        <Stack.Screen name='KYC' component={KYC} options={{headerShown:true}}/>
+        <Stack.Screen name='Add ID Proof' component={IdentityProofVerication} options={{headerShown:true}}/>
+        <Stack.Screen name='Bank verification' component={BankVerification} options={{headerShown:true}}/>
 
   </Stack.Navigator>
   )

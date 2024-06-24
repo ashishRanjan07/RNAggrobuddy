@@ -16,5 +16,7 @@ export default Images = {
     digital:require('../assets/image/digital.png'),
     damage:require('../assets/image/damage.jpg'),
     satelite:require('../assets/image/satelite.png'),
-    asr:require('../assets/image/asr.png')
+    asr:require('../assets/image/asr.png'),
+    aadhar:require('../assets/image/aadhar.png'),
+    pan:require('../assets/image/pan.jpg')
 }
