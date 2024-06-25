@@ -17,9 +17,9 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import CustomButton from '../CustomButton';
 import ImagePath from '../../constant/ImagePath';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
-import { useSelector } from 'react-redux';
+import {useSelector} from 'react-redux';
 import translations from '../../constant/String';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 const NewRegistrationForm = () => {
   const navigation = useNavigation();
   const language = useSelector(state => state.language);
@@ -43,19 +43,19 @@ const NewRegistrationForm = () => {
   };
   const handleModal = () => setShowImageModal(() => !showImageModal);
   const handleSubmit = async () => {
-    console.log(
-      name,
-      gender,
-      mobile,
-      email,
-      address,
-      pinCode,
-      state,
-      city,
-      landmark,
-      'Line 34',
-      navigation.push('Login')
-    );
+    // console.log(
+    //   name,
+    //   gender,
+    //   mobile,
+    //   email,
+    //   address,
+    //   pinCode,
+    //   state,
+    //   city,
+    //   landmark,
+    //   'Line 34',
+    //   navigation.push('Login')
+    // );
   };
 
   const cameraOpen = async () => {
@@ -71,9 +71,9 @@ const NewRegistrationForm = () => {
       };
       launchCamera(options, async response => {
         if (response.didCancel) {
-          console.log('User cancel Camera');
+          // console.log('User cancel Camera');
         } else if (response.error) {
-          console.log('Camera Error:', response.error);
+          // console.log('Camera Error:', response.error);
         } else {
           let imageUri = response.uri || response.assets[0]?.uri;
           setShowImageModal(false);
@@ -81,7 +81,7 @@ const NewRegistrationForm = () => {
         }
       });
     } catch (error) {
-      console.log('Error in Opening camera', error.message);
+      // console.log('Error in Opening camera', error.message);
     }
   };
 
@@ -97,9 +97,9 @@ const NewRegistrationForm = () => {
 
       launchImageLibrary(options, async response => {
         if (response.didCancel) {
-          console.log('User Cancel Image Picker');
+          // console.log('User Cancel Image Picker');
         } else if (response.error) {
-          console.log('Image Picker Error:', response.error);
+          // console.log('Image Picker Error:', response.error);
         } else {
           let imageUri = response.uri || response.assets[0]?.uri;
           setShowImageModal(false);
@@ -107,7 +107,7 @@ const NewRegistrationForm = () => {
         }
       });
     } catch (error) {
-      console.log('Error in Open Image Picker:', error.message);
+      // console.log('Error in Open Image Picker:', error.message);
     }
   };
 
@@ -202,8 +202,7 @@ const NewRegistrationForm = () => {
           />
         </View>
         {/* pinCode and State */}
-        <View
-          style={styles.view}>
+        <View style={styles.view}>
           <View style={[styles.inputHolder, {width: '45%'}]}>
             <Text style={styles.labelText}>{string.Pin_Code}</Text>
             <TextInput
@@ -226,8 +225,7 @@ const NewRegistrationForm = () => {
           </View>
         </View>
         {/* City and Landmark */}
-        <View
-          style={styles.view}>
+        <View style={styles.view}>
           <View style={[styles.inputHolder, {width: '45%'}]}>
             <Text style={styles.labelText}>{string.City}</Text>
             <TextInput
@@ -300,7 +298,9 @@ const NewRegistrationForm = () => {
         {/* Modal for Image picker */}
         <Modal isVisible={showImageModal}>
           <View style={styles.modelContainer}>
-            <Text style={styles.modelText}>{string.Upload_Profile_Picture}</Text>
+            <Text style={styles.modelText}>
+              {string.Upload_Profile_Picture}
+            </Text>
             <TouchableOpacity onPress={galleryOpen} style={styles.buttonHolder}>
               <MaterialIcons
                 name="photo-library"
@@ -402,10 +402,10 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     borderRadius: responsive(100),
   },
-  view:{
+  view: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '95%',
     alignSelf: 'center',
-  }
+  },
 });

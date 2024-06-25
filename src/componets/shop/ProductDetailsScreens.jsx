@@ -43,12 +43,12 @@ const ProductDetailsScreens = ({route}) => {
   const handelAddToCart = () => {
     setAlertVisible(true);
   };
-  const handelBuyNow = (item) => {
-    console.log('Buy Noe Button Pressed',item);
-    navigation.navigate('Buy Now',{item});
+  const handelBuyNow = item => {
+    // console.log('Buy Noe Button Pressed',item);
+    navigation.navigate('Buy Now', {item});
   };
   const handelSuccess = () => {
-    console.log('Success');
+    // console.log('Success');
     setAlertVisible(false);
   };
   return (
@@ -151,7 +151,7 @@ const ProductDetailsScreens = ({route}) => {
         <View style={{width: '45%'}}>
           <CustomButton
             title={'Buy Now'}
-            handleAction={()=>handelBuyNow(item)}
+            handleAction={() => handelBuyNow(item)}
             color={AppColor.dark_Green}
           />
         </View>

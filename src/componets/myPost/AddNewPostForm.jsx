@@ -49,10 +49,10 @@ const AddNewPostForm = ({title, edit}) => {
         const imageUris = images.map(image => image.path);
         setSelectedProductImage(imageUris);
       } else {
-        console.log('User Cancelled Image Picker');
+        // console.log('User Cancelled Image Picker');
       }
     } catch (error) {
-      console.log('Image Picker Error:', error);
+      // console.log('Image Picker Error:', error);
     }
   };
 

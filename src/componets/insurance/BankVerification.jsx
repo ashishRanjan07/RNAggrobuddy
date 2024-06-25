@@ -24,14 +24,14 @@ const BankVerification = ({route}) => {
   const [ifscCode, setIFSCCode] = useState('');
   const [passbookImage, setPassbookImage] = useState('');
   const HandleSubmit = async () => {
-    console.log('Submit Button Clicked');
+    // console.log('Submit Button Clicked');
     navigation.goBack();
   };
   const removeImage = async () => {
     setPassbookImage('');
   };
   const handleImageSelection = async => {
-    console.log('Image Upload Clicked ');
+    // console.log('Image Upload Clicked ');
     cameraOpen();
   };
   const cameraOpen = async () => {
@@ -47,16 +47,16 @@ const BankVerification = ({route}) => {
       };
       launchCamera(options, async response => {
         if (response.didCancel) {
-          console.log('User cancel Camera');
+          // console.log('User cancel Camera');
         } else if (response.error) {
-          console.log('Camera Error:', response.error);
+          // console.log('Camera Error:', response.error);
         } else {
           let imageUri = response.uri || response.assets[0]?.uri;
           setPassbookImage(imageUri);
         }
       });
     } catch (error) {
-      console.log('Error in Opening camera', error.message);
+      // console.log('Error in Opening camera', error.message);
     }
   };
   return (

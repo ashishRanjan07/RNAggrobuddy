@@ -9,7 +9,7 @@ const TermsAndConditionModal = ({visible, onClose, onConfirm}) => {
   const language = useSelector(state => state.language);
   const string = translations[language];
   const handleConfirm = () => {
-    console.log('You agree with the our terms and condition');
+    // console.log('You agree with the our terms and condition');
     onClose();
   };
   return (

@@ -12,6 +12,7 @@ import React, {useEffect, useState} from 'react';
 import CustomHeader from '../CustomHeader';
 import AppColor from '../../constant/AppColor';
 import {responsive} from '../../constant/Responsive';
+import SecondaryCustomHeader from '../SecondaryCustomHeader';
 
 const ProductCategory = ({route}) => {
   const {item} = route.params;
@@ -50,7 +51,7 @@ const ProductCategory = ({route}) => {
     <View style={styles.main}>
       <SafeAreaView style={{backgroundColor: AppColor.primary}} />
       <StatusBar backgroundColor={AppColor.primary} barStyle={'dark-content'} />
-      <CustomHeader title={item.name} onSearch={handleSearch} />
+      <SecondaryCustomHeader title={item.name}/>
       <View style={styles.flatListHolder}>
         <FlatList
           showsVerticalScrollIndicator={false}

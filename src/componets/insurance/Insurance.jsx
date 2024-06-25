@@ -1,12 +1,12 @@
 import {
-    Alert,
+  Alert,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import AppColor from '../../constant/AppColor';
 import {responsive} from '../../constant/Responsive';
 import CustomButton from '../CustomButton';
@@ -16,13 +16,13 @@ import InsuranceBenefitsCard from './InsuranceBenefitsCard';
 import ImagePath from '../../constant/ImagePath';
 import InsuranceStep from './InsuranceStep';
 import InsuranceClaimProcess from './InsuranceClaimProcess';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 const Insurance = () => {
   const navigation = useNavigation();
-    const [showNeedHelp,setShowNeedHelp] = useState(false);
-    if(showNeedHelp){
-        Alert.alert("Need Help","Call on 6206416452")
-    }
+  const [showNeedHelp, setShowNeedHelp] = useState(false);
+  if (showNeedHelp) {
+    Alert.alert('Need Help', 'Call on 6206416452');
+  }
   return (
     <>
       <ScrollView style={styles.main}>
@@ -99,7 +99,9 @@ const Insurance = () => {
         <InsuranceClaimProcess />
         {/* Need Help Floating Button */}
       </ScrollView>
-      <TouchableOpacity style={styles.needHelpButton} onPress={()=> setShowNeedHelp(!showNeedHelp)}>
+      <TouchableOpacity
+        style={styles.needHelpButton}
+        onPress={() => setShowNeedHelp(!showNeedHelp)}>
         <Text style={styles.helpText}>Need Help ?</Text>
       </TouchableOpacity>
     </>

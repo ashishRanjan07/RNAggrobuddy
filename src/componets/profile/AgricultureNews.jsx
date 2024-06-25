@@ -109,13 +109,13 @@ const styles = StyleSheet.create({
   },
   renderViewHolder: {
     flex: 1,
-    borderWidth:2,
+    // borderWidth:2,
     padding:responsive(10),
     borderRadius:responsive(10),
     elevation:responsive(10),
     backgroundColor:AppColor.white,
     marginBottom:responsive(20),
-    borderColor:AppColor.primary
+    // borderColor:AppColor.primary
   },
   imageHolder: {
     backgroundColor: AppColor.black,
