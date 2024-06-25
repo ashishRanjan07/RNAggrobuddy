@@ -86,17 +86,17 @@ const EditAddressForm = ({route}) => {
       setRoadError('Enter nearby or landmark Name');
       return;
     }
-    console.log(
-      name,
-      phoneNo,
-      pinCode,
-      stateName,
-      city,
-      house,
-      roadName,
-      typeOfAddress,
-      'Line 26',
-    );
+    // console.log(
+    //   name,
+    //   phoneNo,
+    //   pinCode,
+    //   stateName,
+    //   city,
+    //   house,
+    //   roadName,
+    //   typeOfAddress,
+    //   'Line 26',
+    // );
   };
   return (
     <ScrollView style={styles.main} showsVerticalScrollIndicator={false}>

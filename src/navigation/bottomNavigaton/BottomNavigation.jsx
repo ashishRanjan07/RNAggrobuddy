@@ -16,8 +16,11 @@ const Tab = createBottomTabNavigator();
 const BottomNavigation = () => {
   const language = useSelector(state => state.language);
   const string = translations[language];
+  // console.log(string.Home,"Line 19")
   return (
     <Tab.Navigator
+      initialRouteName={string.Home}
+      backBehavior="initialRoute"
       screenOptions={({route}) => ({
         tabBarIcon: ({focused, color, size}) => {
           let iconName;
@@ -75,7 +78,7 @@ const BottomNavigation = () => {
         },
         tabBarActiveTintColor: AppColor.light_Green,
         tabBarInactiveTintColor: AppColor.light_Grey,
-        tabBarHideOnKeyboard:true
+        tabBarHideOnKeyboard: true,
       })}>
       <Tab.Screen
         name={string.Home}

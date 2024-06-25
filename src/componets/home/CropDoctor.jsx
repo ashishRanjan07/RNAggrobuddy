@@ -13,11 +13,11 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 const CropDoctor = () => {
   const handleCall = () => {
-    console.log('Call Clicked');
+    // console.log('Call Clicked');
     Linking.openURL(`tel:+9118001036110`);
   };
   const handleChat = () => {
-    console.log('Chat Clicked ');
+    // console.log('Chat Clicked ');
     const Ph = `+91${6206416452}`;
     let message = encodeURIComponent(
       `Hi there!\n I want to talk related to my product.\n Specifically, I'm interested in the Onion Production.\n How can I learn more or make an inquiry?`,

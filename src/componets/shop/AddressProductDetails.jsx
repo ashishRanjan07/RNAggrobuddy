@@ -44,31 +44,33 @@ const AddressProductDetails = ({item}) => {
   }, [item, qty]);
 
   const handleBuyNow = () => {
-    console.log("Buy Now Button CLicked");
+    console.log('Buy Now Button CLicked');
     var options = {
       description: 'Credits towards consultation',
       image: require('../../assets/image/imageOne.png'),
       currency: 'INR',
-      key: 'rzp_test_ihyN942As43mJi', 
+      key: 'rzp_test_ihyN942As43mJi',
       amount: {newPrice},
-      name: "item.title",
+      name: 'item.title',
       prefill: {
         email: 'aviashishranjan@gmail.com',
         contact: '6206416452',
-        name: 'Aggrobuddy Farmer Solutions'
+        name: 'Aggrobuddy Farmer Solutions',
       },
-      theme: {color: '#F37254'}
-    }
-    RazorpayCheckout.open(options).then((data) => {
-      // handle success
-      console.log("step 01")
-      alert(`Success: ${data.razorpay_payment_id}`);
-    }).catch((error) => {
-      // handle failure
-      console.log("step 02")
-      alert(`Error: ${error.code} | ${error.description}`);
-      console.log(error,"line 70")
-    });
+      theme: {color: '#F37254'},
+    };
+    RazorpayCheckout.open(options)
+      .then(data => {
+        // handle success
+        // console.log("step 01")
+        alert(`Success: ${data.razorpay_payment_id}`);
+      })
+      .catch(error => {
+        // handle failure
+        // console.log("step 02")
+        alert(`Error: ${error.code} | ${error.description}`);
+        // console.log(error,"line 70")
+      });
   };
 
   return (
@@ -172,7 +174,7 @@ const AddressProductDetails = ({item}) => {
       />
       {/* Lower Button */}
       <View style={styles.buttonHolder}>
-        <View style={styles.priceTab} >
+        <View style={styles.priceTab}>
           <Text style={[styles.price, {textDecorationLine: 'line-through'}]}>
             {price}{' '}
           </Text>
@@ -280,16 +282,16 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     padding: responsive(10),
     alignItems: 'center',
-    marginVertical:responsive(20),
+    marginVertical: responsive(20),
   },
-  priceTab:{
-    borderWidth:2,
-    backgroundColor:AppColor.primary,
-   borderRadius:responsive(5),
-   padding:responsive(15),
-   borderColor:AppColor.primary,
-   flexDirection:'row',
-   gap:responsive(10),
-   alignItems:'center'
-  }
+  priceTab: {
+    borderWidth: 2,
+    backgroundColor: AppColor.primary,
+    borderRadius: responsive(5),
+    padding: responsive(15),
+    borderColor: AppColor.primary,
+    flexDirection: 'row',
+    gap: responsive(10),
+    alignItems: 'center',
+  },
 });

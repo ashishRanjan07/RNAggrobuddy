@@ -20,6 +20,8 @@ import KYC from '../../../componets/insurance/KYC';
 import IdentityProofVerication from '../../../componets/insurance/IdentityProofVerication';
 import BankVerification from '../../../componets/insurance/BankVerification';
 import CropMonitoring from '../../../componets/cropMonitoring/CropMonitoring';
+import DrawerNavigation from '../../drawerNavigation/DrawerNavigation';
+import Order from '../../../componets/order/Order';
 
 
 const Stack = createNativeStackNavigator();
@@ -27,7 +29,7 @@ const AppStack = () => {
   return (
   <Stack.Navigator>
     {/* <Stack.Screen name='Product Category' component={ProductCategory} /> */}
-    <Stack.Screen name ='BottomTab' component={BottomNavigation} options={{headerShown:false}}/>
+    <Stack.Screen name ='BottomTab' component={DrawerNavigation} options={{headerShown:false}}/>
     <Stack.Screen name ='Product Category' component={ProductCategory} options={{headerShown:false}}/>
         <Stack.Screen name='Add Product' component={AddNewPost} options={{headerShown:false}}/>
         <Stack.Screen name='Privacy Policy' component={PrivacyPolicy} options={{headerShown:true}}/>
@@ -46,6 +48,7 @@ const AppStack = () => {
         <Stack.Screen name='Add ID Proof' component={IdentityProofVerication} options={{headerShown:true}}/>
         <Stack.Screen name='Bank verification' component={BankVerification} options={{headerShown:true}}/>
         <Stack.Screen name='Crop Monitoring' component={CropMonitoring} options={{headerShown:true}}/>
+        <Stack.Screen name='Order' component={Order} options={{headerShown:false}}/>
 
   </Stack.Navigator>
   )

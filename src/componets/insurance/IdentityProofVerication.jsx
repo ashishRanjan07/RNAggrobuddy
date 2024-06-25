@@ -27,7 +27,7 @@ const IdentityProofVerication = ({route}) => {
     setUploadImage('');
   };
   const handleImageSelection = async type => {
-    console.log('Image Upload Clicked ', type);
+    // console.log('Image Upload Clicked ', type);
     cameraOpen();
   };
 
@@ -44,9 +44,9 @@ const IdentityProofVerication = ({route}) => {
       };
       launchCamera(options, async response => {
         if (response.didCancel) {
-          console.log('User cancel Camera');
+          // console.log('User cancel Camera');
         } else if (response.error) {
-          console.log('Camera Error:', response.error);
+          // console.log('Camera Error:', response.error);
         } else {
           let imageUri = response.uri || response.assets[0]?.uri;
           setIsDocUpload(true);
@@ -54,7 +54,7 @@ const IdentityProofVerication = ({route}) => {
         }
       });
     } catch (error) {
-      console.log('Error in Opening camera', error.message);
+      // console.log('Error in Opening camera', error.message);
     }
   };
   const removeImage = async () => {
@@ -63,7 +63,7 @@ const IdentityProofVerication = ({route}) => {
     setIsDocUpload(false);
   };
   const HandleSubmit = async () => {
-    console.log('Submit Button Clicked');
+    // console.log('Submit Button Clicked');
     navigation.goBack();
   };
   return (

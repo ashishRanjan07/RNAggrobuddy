@@ -43,9 +43,9 @@ const CropMonitoring = () => {
       };
       launchCamera(options, async response => {
         if (response.didCancel) {
-          console.log('User cancel Camera');
+          // console.log('User cancel Camera');
         } else if (response.error) {
-          console.log('Camera Error:', response.error);
+          // console.log('Camera Error:', response.error);
         } else {
           let imageUri = response.uri || response.assets[0]?.uri;
           setGroundImage(imageUri);
@@ -53,12 +53,12 @@ const CropMonitoring = () => {
         }
       });
     } catch (error) {
-      console.log('Error in Opening camera', error.message);
+      // console.log('Error in Opening camera', error.message);
     }
   };
 
   const handleAddFarm = async () => {
-    console.log('Please Add Farm');
+    // console.log('Please Add Farm');
     setAlertVisible(true);
     // navigation.goBack();
   };

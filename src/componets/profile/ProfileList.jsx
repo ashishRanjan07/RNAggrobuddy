@@ -46,9 +46,9 @@ const ProfileList = () => {
     await AsyncStorage.removeItem('isOTPVerified');
     dispatch(login('No'));
     dispatch(saveData('No'));
-    dispatch(changeLanguage('en'))
+    dispatch(changeLanguage('en'));
     await AsyncStorage.removeItem('language');
-  }
+  };
   const showTermsAndConditionModal = () => {
     setTermAndConditionVisible(true);
   };
@@ -72,7 +72,7 @@ const ProfileList = () => {
   };
   const handleAccountDeletionConfirm = () => {
     hideDeletionModal();
-    commonFunction()
+    commonFunction();
   };
   const showAlert = () => {
     setAlertVisible(true);
@@ -82,14 +82,9 @@ const ProfileList = () => {
     setAlertVisible(false);
   };
   const handleLogout = async () => {
-    console.log("logout clicked")
-    commonFunction()
-    // await AsyncStorage.removeItem('isOTPVerified');
-    // dispatch(login('No'));
-    // dispatch(saveData('No'));
-    // dispatch(changeLanguage('en'))
-    // await AsyncStorage.removeItem('language');
-    console.log("ji")
+    // console.log("logout clicked")
+    commonFunction();
+    // console.log("ji")
   };
   const changeLanguageToEnglish = async () => {
     // console.log('English');
@@ -123,12 +118,14 @@ const ProfileList = () => {
     <View style={styles.main}>
       <ScrollView style={styles.scroll} showsVerticalScrollIndicator={false}>
         {/* Order and Booking */}
-        <ProfileHeader/>
+        <ProfileHeader />
         <View style={styles.contentHolder}>
           <View style={styles.headerHolder}>
             <Text style={styles.headerText}>{string.orderAndBooking}</Text>
           </View>
-          <TouchableOpacity style={styles.listHolder}>
+          <TouchableOpacity
+            style={styles.listHolder}
+            onPress={() => navigation.navigate('Order')}>
             <View style={styles.iconHolder}>
               <Feather
                 name="shopping-bag"

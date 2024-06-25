@@ -10,7 +10,9 @@ import React, {useState, useRef} from 'react';
 import {responsive} from '../constant/Responsive';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AppColor from '../constant/AppColor';
+import { useNavigation } from '@react-navigation/native';
 const CustomHeader = ({title, onSearch}) => {
+  const navigation= useNavigation();
   const [showSearch, setShowSearch] = useState(false);
   const [searchText, setSearchText] = useState('');
   const positionAnim = useRef(new Animated.Value(-100)).current;
@@ -42,7 +44,7 @@ const CustomHeader = ({title, onSearch}) => {
   return (
     <>
       <View style={styles.main}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.openDrawer()}>
           <Ionicons name="menu" size={responsive(30)} color={AppColor.white} />
         </TouchableOpacity>
         <Text style={styles.text}>{title}</Text>

@@ -3,6 +3,7 @@ import React from 'react';
 import AppColor from '../../constant/AppColor';
 import CustomHeader from '../CustomHeader';
 import AddNewPostForm from './AddNewPostForm';
+import SecondaryCustomHeader from '../SecondaryCustomHeader';
 
 const AddNewPost = ({route}) => {
     const {title,edit,data} = route.params;
@@ -10,7 +11,8 @@ const AddNewPost = ({route}) => {
     <View style={styles.main}>
       <SafeAreaView style={{backgroundColor: AppColor.primary}} />
       <StatusBar barStyle={'dark-content'} backgroundColor={AppColor.primary} />
-      <CustomHeader title={title} />
+      {/* <CustomHeader title={title} /> */}
+      <SecondaryCustomHeader title={title}/>
       <AddNewPostForm title={title} edit={edit ? data :''} />
     </View>
   );
