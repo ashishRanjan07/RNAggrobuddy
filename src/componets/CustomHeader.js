@@ -42,7 +42,7 @@ const CustomHeader = ({title, onSearch}) => {
   };
 
   return (
-    <>
+    <View style={{backgroundColor:AppColor.primary}}>
       <View style={styles.main}>
         <TouchableOpacity onPress={()=>navigation.openDrawer()}>
           <Ionicons name="menu" size={responsive(30)} color={AppColor.white} />
@@ -80,7 +80,7 @@ const CustomHeader = ({title, onSearch}) => {
           )}
         </Animated.View>
       )}
-    </>
+    </View>
   );
 };
 
@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    backgroundColor:AppColor.primary
   },
   text: {
     fontSize: responsive(24),

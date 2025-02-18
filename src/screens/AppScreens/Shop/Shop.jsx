@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     height: responsive(150),
     alignItems: 'center',
     alignSelf: 'center',
-    borderWidth: 2,
+    // borderWidth: 2,
   },
   imageStyle: {
     width: responsive(150),

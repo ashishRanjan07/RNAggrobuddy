@@ -1,4 +1,11 @@
-import {SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View} from 'react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import React from 'react';
 import AppColor from '../../../constant/AppColor';
 import HomeHeader from '../../../componets/home/HomeHeader';
@@ -9,15 +16,21 @@ import CustomHeader from '../../../componets/CustomHeader';
 
 const Home = () => {
   return (
-    <ScrollView style={styles.main} showsVerticalScrollIndicator={false}>
+    <View style={{flex: 1}}>
       <SafeAreaView style={{backgroundColor: AppColor.primary}} />
-      <StatusBar barStyle={'dark-content'} backgroundColor={AppColor.primary} />
-      <CustomHeader title={"Aggrobuddy"}/>
-      <HomeHeader />
-      <HomeSearch />
-      <HomeCropPicker />
-      <HomeServices/>
-    </ScrollView>
+      <CustomHeader title={'Aggrobuddy'} />
+      <ScrollView style={styles.main} showsVerticalScrollIndicator={false}>
+        <StatusBar
+          barStyle={'dark-content'}
+          backgroundColor={AppColor.primary}
+        />
+      
+        <HomeHeader />
+        <HomeSearch />
+        <HomeCropPicker />
+        <HomeServices />
+      </ScrollView>
+    </View>
   );
 };
 

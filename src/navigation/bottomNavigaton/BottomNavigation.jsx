@@ -73,7 +73,7 @@ const BottomNavigation = () => {
           );
         },
         tabBarStyle: {
-          height: responsive(75),
+          height: 80,
           backgroundColor: AppColor.white,
         },
         tabBarActiveTintColor: AppColor.light_Green,

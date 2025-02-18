@@ -8,13 +8,12 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnable
 import com.facebook.react.defaults.DefaultReactActivityDelegate
 
 class MainActivity : ReactActivity() {
-
   override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Add this line to prevent screenshots and screen recordings
         window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
     }
-
+    
 
   /**
    * Returns the name of the main component registered from JavaScript. This is used to schedule
@@ -29,3 +28,4 @@ class MainActivity : ReactActivity() {
   override fun createReactActivityDelegate(): ReactActivityDelegate =
       DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled)
 }
+

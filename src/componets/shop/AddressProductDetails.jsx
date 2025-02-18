@@ -49,9 +49,9 @@ const AddressProductDetails = ({item}) => {
       description: 'Credits towards consultation',
       image: require('../../assets/image/imageOne.png'),
       currency: 'INR',
-      key: 'rzp_test_ihyN942As43mJi',
+      key: 'rzp_live_yKs5BcgW1TjjzO',
       amount: {newPrice},
-      name: 'item.title',
+      name: 'Aggrobuddy Merchant',
       prefill: {
         email: 'aviashishranjan@gmail.com',
         contact: '6206416452',

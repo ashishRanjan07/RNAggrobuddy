@@ -4,7 +4,7 @@ import {responsive} from '../../constant/Responsive';
 import AppColor from '../../constant/AppColor';
 import ImagePath from '../../constant/ImagePath';
 import ServiceCard from './ServiceCard';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 const HomeServices = () => {
   const navigation = useNavigation();
@@ -13,14 +13,46 @@ const HomeServices = () => {
     <View style={styles.main}>
       <Text style={styles.label}>Our Services</Text>
       <View style={styles.serviceHolder}>
-        <ServiceCard title={'Program'} image={ImagePath.farmerProgram} handleAction={()=> null} />
-        <ServiceCard title={'Mandi Price'} image={ImagePath.mandiPrice} handleAction={()=> navigation.navigate('Rate List')}/>
-        <ServiceCard title={'Crop Doctor'} image={ImagePath.cropDoctor} handleAction={()=> navigation.navigate('Crop Doctor')} />
-        <ServiceCard title={'Weather'} image={ImagePath.weather} handleAction={()=>navigation.navigate('Weather Alert')} />
-        <ServiceCard title={'Soil Testing'} image={ImagePath.soilTest} handleAction={()=>navigation.navigate('Soil Test Booking')} />
-        <ServiceCard title={'Crop Monitoring'} image={ImagePath.cropMonitor} handleAction={()=>navigation.navigate('Crop Monitoring')} />
-        <ServiceCard title={'Crop Insurance'} image={ImagePath.cropInsurance} handleAction={()=>navigation.navigate('Insurance')} />
-        <ServiceCard title={'Nearest Store'} image={ImagePath.nearStore} handleAction={()=>{}} />
+        <ServiceCard
+          title={'Program'}
+          image={ImagePath.farmerProgram}
+          handleAction={() => null}
+        />
+        <ServiceCard
+          title={'Mandi Price'}
+          image={ImagePath.mandiPrice}
+          handleAction={() => navigation.navigate('Rate List')}
+        />
+        <ServiceCard
+          title={'Crop Doctor'}
+          image={ImagePath.cropDoctor}
+          handleAction={() => navigation.navigate('Crop Doctor')}
+        />
+        <ServiceCard
+          title={'Weather'}
+          image={ImagePath.weather}
+          handleAction={() => navigation.navigate('Weather Alert')}
+        />
+        <ServiceCard
+          title={'Soil Testing'}
+          image={ImagePath.soilTest}
+          handleAction={() => navigation.navigate('Soil Test Booking')}
+        />
+        <ServiceCard
+          title={'Crop Monitoring'}
+          image={ImagePath.cropMonitor}
+          handleAction={() => navigation.navigate('Crop Monitoring')}
+        />
+        <ServiceCard
+          title={'Crop Insurance'}
+          image={ImagePath.cropInsurance}
+          handleAction={() => navigation.navigate('Insurance')}
+        />
+        <ServiceCard
+          title={'Nearest Store'}
+          image={ImagePath.nearStore}
+          handleAction={() => {}}
+        />
       </View>
     </View>
   );
@@ -37,7 +69,7 @@ const styles = StyleSheet.create({
     elevation: responsive(10),
     padding: responsive(10),
     paddingHorizontal: responsive(15),
-    marginBottom:responsive(10)
+    marginBottom: responsive(10),
   },
   label: {
     fontSize: responsive(22),
@@ -48,7 +80,7 @@ const styles = StyleSheet.create({
     marginVertical: responsive(10),
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: responsive(15),
+    gap: responsive(5),
   },
   imageStyle: {
     width: responsive(80),
